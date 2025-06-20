@@ -35,21 +35,21 @@
     }
 
     .main-content {
-      max-width: 95vw;
+      max-width: 1300px;
       margin: 0 auto;
-      padding: 10px 10px 30px;
+      padding: 10px 30px 60px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 30px;
     }
 
     .preview-box {
-      background-color: #ffffff;
-      padding: 20px;
-      border-radius: 8px;
+      background-color: #fff;
+      padding: 25px 30px;
+      border-radius: 10px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.06);
     }
 
@@ -65,8 +65,8 @@
       font-weight: bold;
       color: #1D1D1D;
       text-decoration: none;
-      margin: 8px 0;
       display: block;
+      margin-top: 10px;
     }
 
     .article-title:hover {
@@ -74,7 +74,7 @@
     }
 
     .article-chapeau {
-      margin-top: 5px;
+      margin-top: 10px;
       color: #1D1D1D;
     }
 
@@ -86,35 +86,34 @@
     }
 
     footer {
-      margin-top: 60px;
-      padding: 40px 20px 60px;
+      margin-top: 80px;
+      padding-bottom: 80px;
       text-align: center;
     }
 
-    .footer-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+    .footer-links {
+      font-weight: bold;
+      margin-bottom: 20px;
     }
 
     .footer-links a {
       color: #1D1D1D;
       text-decoration: none;
-      font-weight: bold;
-      margin-bottom: 10px;
-      display: block;
+    }
+
+    .footer-links a:hover {
+      color: #A398B3;
     }
 
     .icon-links {
       display: flex;
-      gap: 25px;
-      margin-top: 5px;
+      justify-content: center;
+      gap: 30px;
     }
 
     .icon-links a svg {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       fill: #1D1D1D;
       transition: fill 0.3s;
     }
@@ -125,15 +124,16 @@
 
     @media (max-width: 768px) {
       .site-title {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
       }
 
       .main-content {
-        padding: 10px 12px;
+        padding: 20px 15px;
       }
 
       .grid {
-        gap: 18px;
+        grid-template-columns: 1fr;
+        gap: 20px;
       }
     }
   </style>
@@ -145,75 +145,76 @@
   </header>
 
   <main class="main-content">
+
     <section class="grid">
       <div class="preview-box">
         <a href="who-moves.html" class="section-title">Who Moves?</a>
-        <a href="#" class="article-title">The Patterns of Migration from Eastern Romania</a>
-        <p class="article-chapeau">A short analysis of the demographic shifts and generational divides among migrants in Moldavia, focusing on education and family ties.</p>
+        <a href="#" class="article-title">Youth Exodus from Iași County</a>
+        <p class="article-chapeau">An overview of how skilled youth are reshaping migration flows in northeastern Romania. Focus on age and education.</p>
         <span class="article-date">June 21, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="who-stays.html" class="section-title">Who Stays?</a>
-        <a href="#" class="article-title">Rural Resilience or Forced Immobility?</a>
-        <p class="article-chapeau">Exploring how economic stagnation, gender norms, and elder care shape immobility in Romania’s countryside.</p>
-        <span class="article-date">June 19, 2025</span>
+        <a href="#" class="article-title">Staying Behind by Choice?</a>
+        <p class="article-chapeau">Exploring patterns of voluntary immobility among older adults and women in small towns and rural areas.</p>
+        <span class="article-date">June 18, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="across-cee.html" class="section-title">Across CEE</a>
-        <a href="#" class="article-title">CEE Migration under the Microscope</a>
-        <p class="article-chapeau">Comparative look at labor migration trends in Poland, Romania, and Bulgaria after 2007. Includes key charts and structural comparisons.</p>
+        <a href="#" class="article-title">Romania & Poland: A Comparison</a>
+        <p class="article-chapeau">This article compares migration trajectories in two Central Eastern European countries, with a focus on post-2015 trends.</p>
         <span class="article-date">June 15, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
-        <a href="#" class="article-title">Where Talent Drains Most</a>
-        <p class="article-chapeau">This piece maps the regions with highest brain drain intensity in Romania using 2011–2021 data, and links them to local infrastructure deficits.</p>
+        <a href="#" class="article-title">Brain Drain Hotspots</a>
+        <p class="article-chapeau">A county-level mapping of skilled migration in Romania. Where is human capital loss highest—and why?</p>
         <span class="article-date">June 12, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="between-the-lines.html" class="section-title">Between the Lines</a>
-        <a href="#" class="article-title">Language of Loss</a>
-        <p class="article-chapeau">How everyday narratives and nostalgic discourse obscure the structural roots of migration, and why this matters for future policy framing.</p>
+        <a href="#" class="article-title">The Discourse of Decline</a>
+        <p class="article-chapeau">An analysis of how national and local media frame population loss, focusing on metaphor and memory.</p>
         <span class="article-date">June 9, 2025</span>
       </div>
     </section>
 
+    <!-- FOOTER JOS DE TOT -->
     <footer>
-      <div class="footer-content">
-        <div class="footer-links">
-          <a href="about.html">About the Project</a>
-        </div>
-        <div class="icon-links">
-          <a href="mailto:natalia.malancu@gmail.com" target="_blank" title="Email">
-            <!-- Gmail SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 
-              2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 
-              6.01V6h16zM4 18V8.21l7.39 5.67a1 1 0 001.22 0L20 
-              8.21V18H4z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
-            <!-- LinkedIn SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 
-              3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
-              2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
-              9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
-          </a>
-          <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
-            <!-- ORCID SVG -->
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 
-              128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
-              112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
-              12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
-              1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
-              0-80Z"/></svg>
-          </a>
-        </div>
+      <div class="footer-links">
+        <a href="about.html">About the Project</a>
+      </div>
+      <div class="icon-links">
+        <a href="mailto:natalia.malancu@gmail.com" target="_blank" title="Email">
+          <!-- Gmail SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 
+            2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 
+            6.01V6h16zM4 18V8.21l7.39 5.67a1 1 0 001.22 0L20 
+            8.21V18H4z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
+          <!-- LinkedIn SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 
+            3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
+            2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
+            9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
+        </a>
+        <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
+          <!-- ORCID SVG -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 
+            128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
+            112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
+            12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
+            1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
+            0-80Z"/></svg>
+        </a>
       </div>
     </footer>
+
   </main>
 
 </body>
