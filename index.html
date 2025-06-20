@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Migration Grounds</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
@@ -20,95 +20,101 @@
 
     header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 50px 20px 30px;
+      background-color: #EFF1F3;
     }
 
     .site-title {
       font-family: 'Lora', serif;
       font-size: 3rem;
-      font-weight: bold;
       color: #1D1D1D;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .container {
       display: flex;
-      min-height: 100vh;
     }
 
     .sidebar {
       background-color: #EED7A1;
+      width: 220px;
       padding: 40px 20px;
-      width: 180px;
-      flex-shrink: 0;
+      position: sticky;
+      top: 0;
+      height: 100vh;
     }
 
-    .sidebar a {
-      display: block;
+    .sidebar-nav {
+      list-style: none;
+    }
+
+    .sidebar-nav li {
       margin-bottom: 20px;
-      color: #A398B3;
-      text-decoration: none;
+    }
+
+    .sidebar-nav a {
+      color: #1D1D1D;
       font-weight: bold;
-      font-family: 'Lora', serif;
+      text-decoration: none;
     }
 
     .main-content {
       flex: 1;
-      padding: 40px 30px;
-      display: flex;
-      flex-direction: column;
+      padding: 40px;
     }
 
-    .grid {
+    .content-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
 
-    .card {
+    .preview-card {
       background-color: #fff;
+      padding: 20px;
       border-radius: 8px;
-      padding: 25px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
-    .section-label {
+    .section-title {
+      font-size: 1.2rem;
       color: #A398B3;
       font-weight: bold;
       margin-bottom: 10px;
-      font-size: 1.1rem;
+      font-family: 'Lora', serif;
     }
 
-    .article-title {
+    .preview-title {
       font-weight: bold;
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-      color: #1D1D1D;
+      margin-bottom: 8px;
+      font-family: 'Lora', serif;
     }
 
-    .article-preview {
+    .preview-text {
       font-size: 0.95rem;
-      margin-bottom: 10px;
     }
 
-    .article-date {
-      font-size: 0.8rem;
-      color: #555;
+    footer {
+      margin-top: 100px;
+      padding-top: 40px;
+      border-top: 1px solid #ccc;
     }
 
-    .footer {
-      margin-top: 80px;
-      padding: 40px 0 20px;
+    .footer-links {
+      display: flex;
+      gap: 30px;
     }
 
-    .footer a {
-      margin-right: 30px;
-      text-decoration: none;
+    .footer-links a {
       color: #1D1D1D;
+      text-decoration: none;
       font-weight: bold;
     }
 
+    /* Responsive two columns */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -116,14 +122,21 @@
 
       .sidebar {
         width: 100%;
-        display: flex;
-        overflow-x: auto;
-        padding: 20px;
-        justify-content: space-around;
+        height: auto;
       }
 
-      .main-content {
-        padding: 20px;
+      .content-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .site-title {
+        font-size: 2.2rem;
       }
     }
   </style>
@@ -131,59 +144,58 @@
 <body>
 
   <header>
-    <div class="site-title">Migration Grounds</div>
+    <a href="index.html" class="site-title">Migration Grounds</a>
   </header>
 
   <div class="container">
     <nav class="sidebar">
-      <a href="#">Who Moves?</a>
-      <a href="#">Who Stays?</a>
-      <a href="#">Across CEE</a>
-      <a href="#">Maps & Gaps</a>
-      <a href="#">Between the Lines</a>
+      <ul class="sidebar-nav">
+        <li><a href="#">Who Moves?</a></li>
+        <li><a href="#">Who Stays?</a></li>
+        <li><a href="#">Across CEE</a></li>
+        <li><a href="#">Maps & Gaps</a></li>
+        <li><a href="#">Between the Lines</a></li>
+      </ul>
     </nav>
 
     <main class="main-content">
-      <div class="grid">
-        <div class="card">
-          <div class="section-label">Who Moves?</div>
-          <div class="article-title">The Patterns of Migration</div>
-          <div class="article-preview">Exploring key demographic trends among recent migrants...</div>
-          <div class="article-date">April 12, 2024</div>
+      <div class="content-grid">
+        <div class="preview-card">
+          <div class="section-title">Who Moves?</div>
+          <div class="preview-title">The Patterns of Migration</div>
+          <div class="preview-text">Exploring demographic dynamics behind emigration. April 12, 2024</div>
         </div>
 
-        <div class="card">
-          <div class="section-label">Who Stays?</div>
-          <div class="article-title">Understanding Retention</div>
-          <div class="article-preview">Why do some professionals remain despite push factors?</div>
-          <div class="article-date">May 3, 2024</div>
+        <div class="preview-card">
+          <div class="section-title">Who Stays?</div>
+          <div class="preview-title">Understanding Retention Factors</div>
+          <div class="preview-text">What keeps skilled people in place and how that changes. May 5, 2024</div>
         </div>
 
-        <div class="card">
-          <div class="section-label">Across CEE</div>
-          <div class="article-title">Regional Migration Trends</div>
-          <div class="article-preview">Comparative insights across Poland, Hungary and Romania.</div>
-          <div class="article-date">March 29, 2024</div>
+        <div class="preview-card">
+          <div class="section-title">Across CEE</div>
+          <div class="preview-title">Trends in Central and Eastern Europe</div>
+          <div class="preview-text">Comparative data and policy impacts. March 15, 2024</div>
         </div>
 
-        <div class="card">
-          <div class="section-label">Maps & Gaps</div>
-          <div class="article-title">Visualizing Flows</div>
-          <div class="article-preview">Data-driven maps showing emerging corridors of mobility.</div>
-          <div class="article-date">April 9, 2024</div>
+        <div class="preview-card">
+          <div class="section-title">Maps & Gaps</div>
+          <div class="preview-title">Visualizing Migration Flows</div>
+          <div class="preview-text">New tools to map mobility. March 30, 2024</div>
         </div>
 
-        <div class="card">
-          <div class="section-label">Between the Lines</div>
-          <div class="article-title">Cultural Contradictions</div>
-          <div class="article-preview">What does everyday discourse say about migration identities?</div>
-          <div class="article-date">April 25, 2024</div>
+        <div class="preview-card">
+          <div class="section-title">Between the Lines</div>
+          <div class="preview-title">Narratives and Contradictions</div>
+          <div class="preview-text">Critical takes and personal reflections. April 20, 2024</div>
         </div>
       </div>
 
       <footer class="footer">
-        <a href="#">About the Project</a>
-        <a href="connect.html">Connect</a>
+        <div class="footer-links">
+          <a href="#">About the Project</a>
+          <a href="connect.html">Connect</a>
+        </div>
       </footer>
     </main>
   </div>
