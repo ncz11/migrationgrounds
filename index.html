@@ -4,115 +4,125 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     body {
       font-family: 'Libre Baskerville', serif;
-      background-color: #EFF1F3;
+      line-height: 1.6;
       color: #1D1D1D;
+      background-color: #EFF1F3;
     }
 
     header {
-      text-align: center;
-      padding: 40px 0;
+      background-color: #EFF1F3;
+      width: 100%;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 3rem;
+      font-size: 4rem;
       font-weight: bold;
       text-transform: uppercase;
       color: #1D1D1D;
+      text-align: center;
       text-decoration: none;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
-      min-height: 100vh;
+      min-height: calc(100vh - 160px);
     }
 
     .sidebar {
-      width: 250px;
       background-color: #EED7A1;
-      padding: 20px;
-      flex-shrink: 0;
+      width: 250px;
+      padding: 20px 0;
+      position: sticky;
+      top: 0;
+      height: fit-content;
     }
 
-    .sidebar ul {
+    .sidebar-nav {
       list-style: none;
     }
 
-    .sidebar a {
+    .sidebar-nav li {
+      margin-bottom: 15px;
+    }
+
+    .sidebar-nav a {
       display: block;
+      padding: 12px 20px;
+      color: #1D1D1D;
       text-decoration: none;
       font-weight: bold;
-      color: #1D1D1D;
-      padding: 12px 0;
     }
 
     .main-content {
-      flex-grow: 1;
+      flex: 1;
       padding: 40px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
 
-    .preview-grid {
+    .content-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
+      margin-bottom: 60px;
     }
 
-    .preview-card {
-      background-color: #f9f9f9;
+    .content-card {
+      background: #fff;
       border-radius: 8px;
       padding: 25px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .preview-title {
-      font-family: 'Lora', serif;
-      font-size: 1.4rem;
+    .card-title {
       color: #A398B3;
+      font-size: 1.5rem;
       font-weight: bold;
-      margin-bottom: 15px;
-    }
-
-    .article-list {
-      list-style: none;
-    }
-
-    .article-list li {
       margin-bottom: 10px;
+      font-family: 'Lora', serif;
     }
 
-    .article-list a {
+    .article-title {
+      font-weight: bold;
       color: #1D1D1D;
-      text-decoration: none;
+      margin-bottom: 5px;
     }
 
-    .article-list a:hover {
-      text-decoration: underline;
+    .article-excerpt {
+      font-size: 0.95rem;
+      color: #1D1D1D;
     }
 
     .footer {
-      margin-top: 60px;
+      background-color: transparent;
+      padding: 50px 0 30px;
     }
 
-    .footer a {
-      font-weight: bold;
+    .footer-links {
+      display: flex;
+      justify-content: flex-start;
+      gap: 30px;
+    }
+
+    .footer-links a {
       color: #1D1D1D;
       text-decoration: none;
-      margin-right: 30px;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
+      font-weight: bold;
     }
 
     @media (max-width: 768px) {
@@ -122,15 +132,38 @@
 
       .sidebar {
         width: 100%;
-        text-align: center;
+        position: static;
+        padding: 15px 0;
       }
 
-      .preview-grid {
-        grid-template-columns: 1fr;
+      .sidebar-nav {
+        display: flex;
+        overflow-x: auto;
+        padding: 0 20px;
+      }
+
+      .sidebar-nav li {
+        margin-bottom: 0;
+        margin-right: 15px;
+        white-space: nowrap;
       }
 
       .main-content {
         padding: 20px;
+      }
+
+      .site-title {
+        font-size: 2.5rem;
+      }
+
+      .content-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 15px;
       }
     }
   </style>
@@ -141,59 +174,55 @@
   </header>
 
   <div class="container">
-    <aside class="sidebar">
-      <ul>
-        <li><a href="who-moves.html">Who Moves?</a></li>
-        <li><a href="who-stays.html">Who Stays?</a></li>
-        <li><a href="across-cee.html">Across CEE</a></li>
-        <li><a href="maps-gaps.html">Maps & Gaps</a></li>
-        <li><a href="between-lines.html">Between the Lines</a></li>
+    <nav class="sidebar">
+      <ul class="sidebar-nav">
+        <li><a href="#">Who Moves?</a></li>
+        <li><a href="#">Who Stays?</a></li>
+        <li><a href="#">Across CEE</a></li>
+        <li><a href="#">Maps & Gaps</a></li>
+        <li><a href="#">Between the Lines</a></li>
       </ul>
-    </aside>
+    </nav>
 
     <main class="main-content">
-      <div class="preview-grid">
-        <div class="preview-card">
-          <div class="preview-title">Who Moves?</div>
-          <ul class="article-list">
-            <li><a href="#">The Patterns of Migration</a></li>
-            <li><a href="#">Demographic Shifts</a></li>
-          </ul>
+      <div class="content-grid">
+        <div class="content-card">
+          <h2 class="card-title">Who Moves?</h2>
+          <div class="article-title">Young Professionals on the Move</div>
+          <p class="article-excerpt">A look into the age and skill profile of recent emigrants from Romania...</p>
         </div>
 
-        <div class="preview-card">
-          <div class="preview-title">Who Stays?</div>
-          <ul class="article-list">
-            <li><a href="#">Understanding Retention Factors</a></li>
-          </ul>
+        <div class="content-card">
+          <h2 class="card-title">Who Stays?</h2>
+          <div class="article-title">Rooted or Stuck?</div>
+          <p class="article-excerpt">Exploring why some skilled workers choose to remain in their home counties.</p>
         </div>
 
-        <div class="preview-card">
-          <div class="preview-title">Across CEE</div>
-          <ul class="article-list">
-            <li><a href="#">Regional Migration Trends</a></li>
-          </ul>
+        <div class="content-card">
+          <h2 class="card-title">Across CEE</h2>
+          <div class="article-title">Comparative Insights from Poland and Bulgaria</div>
+          <p class="article-excerpt">What patterns are shared and what diverges in skilled migration trends?</p>
         </div>
 
-        <div class="preview-card">
-          <div class="preview-title">Maps & Gaps</div>
-          <ul class="article-list">
-            <li><a href="#">Visualizing Migration Flows</a></li>
-          </ul>
+        <div class="content-card">
+          <h2 class="card-title">Maps & Gaps</h2>
+          <div class="article-title">Visualizing County-Level Brain Drain</div>
+          <p class="article-excerpt">Geographic trends in human capital loss, through thematic cartography.</p>
         </div>
 
-        <div class="preview-card">
-          <div class="preview-title">Between the Lines</div>
-          <ul class="article-list">
-            <li><a href="#">Narratives and Hidden Meanings</a></li>
-          </ul>
+        <div class="content-card">
+          <h2 class="card-title">Between the Lines</h2>
+          <div class="article-title">Invisible Stories</div>
+          <p class="article-excerpt">What isn’t said in statistics: voices, contradictions, and quiet departures.</p>
         </div>
       </div>
 
-      <div class="footer">
-        <a href="about.html">About the Project</a>
-        <a href="connect.html">Connect</a>
-      </div>
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="about.html">About the Project</a>
+          <a href="connect.html">Connect</a>
+        </div>
+      </footer>
     </main>
   </div>
 </body>
