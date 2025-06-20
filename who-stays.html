@@ -1,1 +1,186 @@
-<html><head><title>who-stays.html</title><link rel='stylesheet' href='styles.css'></head><body><a href='index.html'>Back to homepage</a><h1>Who Stays.Html</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Stays - Migration Grounds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: #fff;
+            border-bottom: 3px solid #EED7A1;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #1D1D1D;
+            font-size: 2.5em;
+            font-weight: normal;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            text-decoration: none;
+        }
+
+        h1:hover {
+            opacity: 0.8;
+        }
+
+        main {
+            padding: 40px 0;
+        }
+
+        .page-title {
+            color: #A398B3;
+            font-size: 2em;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .article {
+            background: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .article h2 {
+            color: #1D1D1D;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+        }
+
+        .article p {
+            margin-bottom: 15px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: #A398B3;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #1D1D1D;
+        }
+
+        footer {
+            background-color: #fff;
+            border-top: 3px solid #EED7A1;
+            padding: 20px 0;
+            margin-top: 60px;
+        }
+
+        .footer-links {
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: #1D1D1D;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #A398B3;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .page-title {
+                font-size: 1.6em;
+            }
+            
+            .article {
+                padding: 20px;
+            }
+            
+            .footer-links a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 onclick="window.location.href='index.html'">Migration Grounds</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Home</a>
+            
+            <h2 class="page-title">Who Stays</h2>
+            
+            <article class="article">
+                <h2>The Stayers: Understanding Non-Migration in CEE</h2>
+                <p>While much attention is given to those who migrate, equally important questions arise about those who choose to stay. This section explores the complex factors that influence the decision to remain in Central and Eastern European countries despite economic challenges and opportunities elsewhere.</p>
+                
+                <p>Research shows that the decision to stay is not merely passive but often represents an active choice influenced by family ties, cultural connections, professional opportunities, and personal values. Understanding these motivations provides crucial insights into regional development and social cohesion.</p>
+                
+                <p>The narratives of stayers reveal diverse strategies for building fulfilling lives within their home countries, contributing to local communities, and maintaining cultural continuity across generations.</p>
+            </article>
+
+            <article class="article">
+                <h2>Roots and Reasons: The Geography of Staying</h2>
+                <p>Geographic, economic, and social factors create complex patterns of staying versus leaving. Rural-urban divides, regional economic disparities, and access to education and healthcare all play roles in these decisions.</p>
+                
+                <p>Local attachment, community networks, and sense of place emerge as powerful forces that anchor individuals and families to specific locations, even in the face of economic uncertainty.</p>
+            </article>
+
+            <article class="article">
+                <h2>Building Futures at Home</h2>
+                <p>Many who stay become agents of change within their communities, starting businesses, engaging in civic activities, and working to improve local conditions. Their stories highlight the potential for indigenous development and innovation.</p>
+                
+                <p>This section examines successful models of local development and the role of stayers in creating sustainable economic and social progress in their home regions.</p>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="about.html">About the Project</a>
+                <a href="connect.html">Connect</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
