@@ -12,12 +12,15 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: 'Libre Baskerville', serif;
       background-color: #EFF1F3;
       color: #1D1D1D;
       line-height: 1.6;
-      overflow-x: hidden;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
@@ -26,7 +29,7 @@
     header {
       background-color: #EFF1F3;
       text-align: center;
-      padding: 50px 20px 30px;
+      padding: 60px 20px 30px;
     }
 
     .site-title {
@@ -40,21 +43,23 @@
 
     .main-content {
       width: 100%;
-      padding: 20px 5vw 20px;
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 20px 0;
       flex: 1;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
+      gap: 24px;
     }
 
     .preview-box {
       background-color: #fff;
-      padding: 24px;
+      padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
     }
 
     .section-title {
@@ -90,14 +95,15 @@
     }
 
     footer {
+      margin-top: 80px;
+      padding: 50px 20px 80px;
       text-align: center;
-      padding: 60px 20px 80px;
       background-color: transparent;
     }
 
     .footer-links {
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
     }
 
     .footer-links a {
@@ -112,13 +118,13 @@
     .icon-links {
       display: flex;
       justify-content: center;
-      gap: 25px;
-      margin-top: 15px;
+      gap: 24px;
+      margin-top: 10px;
     }
 
     .icon-links a svg {
-      width: 26px;
-      height: 26px;
+      width: 28px;
+      height: 28px;
       fill: #1D1D1D;
       transition: fill 0.3s;
     }
@@ -137,7 +143,7 @@
       }
 
       .main-content {
-        padding: 20px 6vw;
+        padding: 20px 5vw;
       }
     }
   </style>
@@ -154,7 +160,7 @@
         <a href="who-moves.html" class="section-title">Who Moves?</a>
         <a href="#" class="article-title">Youth Exodus from Iași County</a>
         <p class="article-chapeau">
-          An overview of how skilled youth are reshaping migration flows in northeastern Romania. 
+          An overview of how skilled youth are reshaping migration flows in northeastern Romania.
           Focus on age and education. This trend highlights both opportunity and structural inequality.
           Demographic data show sharp contrasts. Policymakers face critical decisions. The future depends on retention.
         </p>
