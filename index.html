@@ -4,189 +4,187 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet"/>
   <style>
-    :root {
-      --bg: #EFF1F3;
-      --ocre: #EED7A1;
-      --text: #1D1D1D;
-      --accent: #A398B3;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin: 0;
-      padding: 0;
       font-family: 'Libre Baskerville', serif;
-      background-color: var(--bg);
-      color: var(--text);
+      background-color: #EFF1F3;
+      color: #1D1D1D;
+      line-height: 1.6;
     }
 
     header {
-      background-color: white;
-      padding: 60px 20px 20px;
+      background-color: #EFF1F3;
       text-align: center;
+      padding: 60px 20px 40px;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 3rem;
-      color: var(--text);
-      text-transform: uppercase;
-      text-decoration: none;
-      cursor: pointer;
+      font-size: 3.5rem;
+      color: #1D1D1D;
+      font-weight: bold;
+      letter-spacing: 1px;
     }
 
-    .content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      padding: 40px 20px;
-      max-width: 1100px;
+    .main-content {
+      max-width: 1200px;
       margin: 0 auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
     }
 
     .preview-box {
-      background: white;
+      background-color: #ffffff;
       padding: 25px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
 
     .section-title {
       font-family: 'Lora', serif;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      color: #A398B3;
       font-weight: bold;
-      color: var(--accent);
-      margin-bottom: 12px;
-      text-decoration: none;
+      margin-bottom: 10px;
       display: inline-block;
-    }
-
-    .latest-article {
-      margin-top: 8px;
-    }
-
-    .latest-article-title {
-      font-weight: bold;
-      font-size: 1rem;
-      color: var(--text);
       text-decoration: none;
     }
 
-    .latest-article-title:hover {
+    .article-title {
+      font-weight: bold;
+      color: #1D1D1D;
+      text-decoration: none;
+    }
+
+    .article-title:hover {
       text-decoration: underline;
     }
 
-    .article-excerpt {
-      font-size: 0.95rem;
-      line-height: 1.4;
-      margin-top: 5px;
+    .article-date {
+      font-style: italic;
+      font-size: 0.9rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .article-chapeau {
+      color: #1D1D1D;
     }
 
     footer {
-      text-align: center;
       margin-top: 60px;
-      padding-bottom: 30px;
+      padding: 40px 20px;
+      text-align: center;
     }
 
-    .footer-icons {
-      margin: 20px 0;
-    }
-
-    .footer-icons a {
-      margin: 0 10px;
-      display: inline-block;
-    }
-
-    .footer-icons svg {
-      width: 26px;
-      height: 26px;
-      fill: var(--text);
-    }
-
-    .footer-links {
-      margin-top: 15px;
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
     }
 
     .footer-links a {
-      margin: 0 15px;
+      color: #1D1D1D;
       text-decoration: none;
       font-weight: bold;
-      color: var(--text);
+      margin-bottom: 10px;
+      display: block;
     }
 
-    .footer-links a:hover {
-      text-decoration: underline;
+    .icon-links {
+      display: flex;
+      gap: 25px;
+      margin-top: 10px;
     }
 
+    .icon-links a svg {
+      width: 28px;
+      height: 28px;
+      fill: #1D1D1D;
+      transition: fill 0.3s;
+    }
+
+    .icon-links a:hover svg {
+      fill: #A398B3;
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <a href="index.html" class="site-title">Migration Grounds</a>
-</header>
+  <header>
+    <div class="site-title">MIGRATION GROUNDS</div>
+  </header>
 
-<main class="content">
+  <main class="main-content">
+    <section class="grid">
+      <div class="preview-box">
+        <a href="who-moves.html" class="section-title">Who Moves?</a>
+        <span class="article-date">Posted on June 21, 2025</span>
+        <a href="#" class="article-title">The Patterns of Migration from Eastern Romania</a>
+        <p class="article-chapeau">A short analysis of the demographic shifts and generational divides among migrants in Moldavia, focusing on education and family ties.</p>
+      </div>
 
-  <div class="preview-box">
-    <a href="who-moves.html" class="section-title">Who Moves?</a>
-    <div class="latest-article">
-      <a href="articles/who-moves-latest.html" class="latest-article-title">Patterns of Skilled Youth Migration</a>
-      <p class="article-excerpt">Recent data show that highly educated young adults leave peripheral counties at rising rates. Regional inequalities fuel the trend...</p>
-    </div>
-  </div>
+      <div class="preview-box">
+        <a href="who-stays.html" class="section-title">Who Stays?</a>
+        <span class="article-date">Posted on June 19, 2025</span>
+        <a href="#" class="article-title">Rural Resilience or Forced Immobility?</a>
+        <p class="article-chapeau">Exploring how economic stagnation, gender norms, and elder care shape immobility in Romania’s countryside. </p>
+      </div>
 
-  <div class="preview-box">
-    <a href="who-stays.html" class="section-title">Who Stays?</a>
-    <div class="latest-article">
-      <a href="articles/who-stays-latest.html" class="latest-article-title">Resilience or Constraint?</a>
-      <p class="article-excerpt">Stayers are often framed as immobile or rooted. But how do we account for the choice to stay as a form of agency?</p>
-    </div>
-  </div>
+      <div class="preview-box">
+        <a href="across-cee.html" class="section-title">Across CEE</a>
+        <span class="article-date">Posted on June 15, 2025</span>
+        <a href="#" class="article-title">CEE Migration under the Microscope</a>
+        <p class="article-chapeau">Comparative look at labor migration trends in Poland, Romania, and Bulgaria after 2007. Includes key charts and structural comparisons.</p>
+      </div>
 
-  <div class="preview-box">
-    <a href="across-cee.html" class="section-title">Across CEE</a>
-    <div class="latest-article">
-      <a href="articles/across-cee-latest.html" class="latest-article-title">Brain Drain in the Baltics</a>
-      <p class="article-excerpt">Comparative insights into emigration trends from Estonia, Latvia, and Lithuania between 2000–2020...</p>
-    </div>
-  </div>
+      <div class="preview-box">
+        <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
+        <span class="article-date">Posted on June 12, 2025</span>
+        <a href="#" class="article-title">Where Talent Drains Most</a>
+        <p class="article-chapeau">This piece maps the regions with highest brain drain intensity in Romania using 2011–2021 data, and links them to local infrastructure deficits.</p>
+      </div>
 
-  <div class="preview-box">
-    <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
-    <div class="latest-article">
-      <a href="articles/maps-gaps-latest.html" class="latest-article-title">Visualizing Labor Mobility</a>
-      <p class="article-excerpt">Explore new thematic maps illustrating wage migration flows and structural gaps in Romanian counties...</p>
-    </div>
-  </div>
+      <div class="preview-box">
+        <a href="between-the-lines.html" class="section-title">Between the Lines</a>
+        <span class="article-date">Posted on June 9, 2025</span>
+        <a href="#" class="article-title">Language of Loss</a>
+        <p class="article-chapeau">How everyday narratives and nostalgic discourse obscure the structural roots of migration, and why this matters for future policy framing.</p>
+      </div>
+    </section>
 
-  <div class="preview-box">
-    <a href="between-the-lines.html" class="section-title">Between the Lines</a>
-    <div class="latest-article">
-      <a href="articles/between-lines-latest.html" class="latest-article-title">The Symbolic Power of Borders</a>
-      <p class="article-excerpt">Reflections on the cultural narratives that shape how we imagine "leaving" and "belonging"...</p>
-    </div>
-  </div>
-
-</main>
-
-<footer>
-  <div class="footer-icons">
-    <a href="mailto:natalia.malancu@gmail.com" title="Email">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13.065 2 6.5V18h20V6.5l-10 6.565zM12 11 2 4h20L12 11z"/></svg>
-    </a>
-    <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" title="LinkedIn" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5C0 2.12 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 24h5V7H0v17zM7.5 8.5H12v2.5h.1c.63-1.2 2.18-2.5 4.4-2.5 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.6c0-1.6-.03-3.6-2.2-3.6-2.2 0-2.6 1.7-2.6 3.5V24h-5V8.5z"/></svg>
-    </a>
-    <a href="https://orcid.org/0000-0002-3576-2422" title="ORCID" target="_blank">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0C57.308 0 0 57.308 0 128s57.308 128 128 128 128-57.308 128-128S198.692 0 128 0zm0 12.8c63.503 0 115.2 51.697 115.2 115.2S191.503 243.2 128 243.2 12.8 191.503 12.8 128 64.497 12.8 128 12.8zm-24.19 39.027v153.346h24.072c55.16 0 71.78-38.31 71.78-76.14 0-40.196-18.794-77.206-71.78-77.206h-24.072zm24.072 21.3h2.462c38.876 0 49.704 27.4 49.704 55.906 0 32.99-14.996 54.352-49.704 54.352h-2.462V73.127z"/></svg>
-    </a>
-  </div>
-  <div class="footer-links">
-    <a href="about.html">About the Project</a>
-  </div>
-</footer>
+    <footer>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="about.html">About the Project</a>
+        </div>
+        <div class="icon-links">
+          <a href="mailto:natalia.malancu@gmail.com" target="_blank" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2..."/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 3.5..."/></svg>
+          </a>
+          <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1..."/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
 
 </body>
 </html>
