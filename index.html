@@ -4,236 +4,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --bg: #EFF1F3;
+      --ocre: #EED7A1;
+      --text: #1D1D1D;
+      --accent: #A398B3;
     }
 
     body {
+      margin: 0;
+      padding: 0;
       font-family: 'Libre Baskerville', serif;
-      background-color: #EFF1F3;
-      color: #1D1D1D;
-      overflow-x: hidden;
+      background-color: var(--bg);
+      color: var(--text);
     }
 
     header {
+      background-color: white;
+      padding: 60px 20px 20px;
       text-align: center;
-      padding: 40px 0 20px 0;
-      background-color: #fff;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 3.5rem;
-      font-weight: bold;
-      color: #1D1D1D;
+      font-size: 3rem;
+      color: var(--text);
       text-transform: uppercase;
       text-decoration: none;
+      cursor: pointer;
     }
 
-    .container {
-      display: flex;
-      min-height: 80vh;
-    }
-
-    .sidebar {
-      background-color: #EED7A1;
-      width: 240px;
-      padding: 30px 0;
-      position: sticky;
-      top: 0;
-      height: fit-content;
-    }
-
-    .sidebar-nav {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    .sidebar-nav li {
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .sidebar-nav a {
-      color: #1D1D1D;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 1.1rem;
-    }
-
-    .main {
-      flex: 1;
-      padding: 30px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .preview-grid {
+    .content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
     }
 
-    .preview-card {
-      background: #ffffff;
-      border-radius: 10px;
+    .preview-box {
+      background: white;
       padding: 25px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .section-title {
       font-family: 'Lora', serif;
-      font-size: 1.5rem;
-      color: #A398B3;
+      font-size: 1.4rem;
       font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    .article-title {
-      font-weight: bold;
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      color: #1D1D1D;
+      color: var(--accent);
+      margin-bottom: 12px;
       text-decoration: none;
       display: inline-block;
     }
 
-    .article-title:hover {
+    .latest-article {
+      margin-top: 8px;
+    }
+
+    .latest-article-title {
+      font-weight: bold;
+      font-size: 1rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .latest-article-title:hover {
       text-decoration: underline;
     }
 
-    .chapeau {
+    .article-excerpt {
       font-size: 0.95rem;
-      color: #1D1D1D;
-      line-height: 1.5;
+      line-height: 1.4;
+      margin-top: 5px;
     }
 
     footer {
-      margin-top: 60px;
       text-align: center;
+      margin-top: 60px;
+      padding-bottom: 30px;
+    }
+
+    .footer-icons {
+      margin: 20px 0;
+    }
+
+    .footer-icons a {
+      margin: 0 10px;
+      display: inline-block;
+    }
+
+    .footer-icons svg {
+      width: 26px;
+      height: 26px;
+      fill: var(--text);
     }
 
     .footer-links {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-bottom: 15px;
+      margin-top: 15px;
     }
 
     .footer-links a {
-      color: #1D1D1D;
+      margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      color: var(--text);
     }
 
-    .icons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    .footer-links a:hover {
+      text-decoration: underline;
     }
 
-    .icons a svg {
-      width: 24px;
-      height: 24px;
-      fill: #1D1D1D;
-      transition: fill 0.3s;
-    }
-
-    .icons a:hover svg {
-      fill: #A398B3;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-      }
-
-      .sidebar-nav {
-        flex-direction: row;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      .sidebar-nav li {
-        margin: 10px;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <a href="#" class="site-title">Migration Grounds</a>
-  </header>
 
-  <div class="container">
-    <nav class="sidebar">
-      <ul class="sidebar-nav">
-        <li><a href="#">Who Moves?</a></li>
-        <li><a href="#">Who Stays?</a></li>
-        <li><a href="#">Across CEE</a></li>
-        <li><a href="#">Maps & Gaps</a></li>
-        <li><a href="#">Between the Lines</a></li>
-      </ul>
-    </nav>
+<header>
+  <a href="index.html" class="site-title">Migration Grounds</a>
+</header>
 
-    <main class="main">
-      <div class="preview-grid">
-        <div class="preview-card">
-          <div class="section-title">Who Moves?</div>
-          <a href="#" class="article-title">The Patterns of Youth Migration</a>
-          <p class="chapeau">New statistics reveal significant increases in skilled youth mobility post-pandemic, reshaping regional labor pools.</p>
-        </div>
-        <div class="preview-card">
-          <div class="section-title">Who Stays?</div>
-          <a href="#" class="article-title">The Invisible Majority</a>
-          <p class="chapeau">Exploring why rural populations in Eastern Romania are less mobile and how they shape the country's demographic profile.</p>
-        </div>
-        <div class="preview-card">
-          <div class="section-title">Across CEE</div>
-          <a href="#" class="article-title">Migration Trends 2024</a>
-          <p class="chapeau">A comparative analysis across Central and Eastern Europe shows diverging strategies in migration governance and social integration.</p>
-        </div>
-        <div class="preview-card">
-          <div class="section-title">Maps & Gaps</div>
-          <a href="#" class="article-title">Where Talent Drains</a>
-          <p class="chapeau">Interactive cartography of counties with the sharpest declines in skilled labor — and where it's going.</p>
-        </div>
-        <div class="preview-card">
-          <div class="section-title">Between the Lines</div>
-          <a href="#" class="article-title">Beyond the Numbers</a>
-          <p class="chapeau">Reflections on statistical silences, blind spots in demographic analysis, and what gets left out of official narratives.</p>
-        </div>
-      </div>
+<main class="content">
 
-      <footer>
-        <div class="footer-links">
-          <a href="#">About the Project</a>
-        </div>
-        <div class="icons">
-          <a href="mailto:natalia.malancu@gmail.com" title="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13.065L.8 4.2h22.4L12 13.065zm0 2.13L0 5.333v14.133h24V5.333L12 15.195z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.94 3.5a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zm.02 4.725H1.5V21h2.46V8.225zm4.095 0h-2.46V21H8.06V14.43c0-3.263 4.18-3.53 4.18 0V21h2.46v-7.478c0-5.35-6.18-5.16-6.68-2.521V8.225z"/></svg>
-          </a>
-          <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zM12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12C24 5.373 18.628 0 12 0zm0 22.5C6.201 22.5 1.5 17.799 1.5 12S6.201 1.5 12 1.5 22.5 6.201 22.5 12 17.799 22.5 12 22.5z"/></svg>
-          </a>
-        </div>
-      </footer>
-    </main>
+  <div class="preview-box">
+    <a href="who-moves.html" class="section-title">Who Moves?</a>
+    <div class="latest-article">
+      <a href="articles/who-moves-latest.html" class="latest-article-title">Patterns of Skilled Youth Migration</a>
+      <p class="article-excerpt">Recent data show that highly educated young adults leave peripheral counties at rising rates. Regional inequalities fuel the trend...</p>
+    </div>
   </div>
+
+  <div class="preview-box">
+    <a href="who-stays.html" class="section-title">Who Stays?</a>
+    <div class="latest-article">
+      <a href="articles/who-stays-latest.html" class="latest-article-title">Resilience or Constraint?</a>
+      <p class="article-excerpt">Stayers are often framed as immobile or rooted. But how do we account for the choice to stay as a form of agency?</p>
+    </div>
+  </div>
+
+  <div class="preview-box">
+    <a href="across-cee.html" class="section-title">Across CEE</a>
+    <div class="latest-article">
+      <a href="articles/across-cee-latest.html" class="latest-article-title">Brain Drain in the Baltics</a>
+      <p class="article-excerpt">Comparative insights into emigration trends from Estonia, Latvia, and Lithuania between 2000–2020...</p>
+    </div>
+  </div>
+
+  <div class="preview-box">
+    <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
+    <div class="latest-article">
+      <a href="articles/maps-gaps-latest.html" class="latest-article-title">Visualizing Labor Mobility</a>
+      <p class="article-excerpt">Explore new thematic maps illustrating wage migration flows and structural gaps in Romanian counties...</p>
+    </div>
+  </div>
+
+  <div class="preview-box">
+    <a href="between-the-lines.html" class="section-title">Between the Lines</a>
+    <div class="latest-article">
+      <a href="articles/between-lines-latest.html" class="latest-article-title">The Symbolic Power of Borders</a>
+      <p class="article-excerpt">Reflections on the cultural narratives that shape how we imagine "leaving" and "belonging"...</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-icons">
+    <a href="mailto:natalia.malancu@gmail.com" title="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13.065 2 6.5V18h20V6.5l-10 6.565zM12 11 2 4h20L12 11z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" title="LinkedIn" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.49 6S0 4.88 0 3.5C0 2.12 1.11 1 2.49 1s2.49 1.12 2.49 2.5zM0 24h5V7H0v17zM7.5 8.5H12v2.5h.1c.63-1.2 2.18-2.5 4.4-2.5 4.7 0 5.6 3.1 5.6 7.2V24h-5v-6.6c0-1.6-.03-3.6-2.2-3.6-2.2 0-2.6 1.7-2.6 3.5V24h-5V8.5z"/></svg>
+    </a>
+    <a href="https://orcid.org/0000-0002-3576-2422" title="ORCID" target="_blank">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0C57.308 0 0 57.308 0 128s57.308 128 128 128 128-57.308 128-128S198.692 0 128 0zm0 12.8c63.503 0 115.2 51.697 115.2 115.2S191.503 243.2 128 243.2 12.8 191.503 12.8 128 64.497 12.8 128 12.8zm-24.19 39.027v153.346h24.072c55.16 0 71.78-38.31 71.78-76.14 0-40.196-18.794-77.206-71.78-77.206h-24.072zm24.072 21.3h2.462c38.876 0 49.704 27.4 49.704 55.906 0 32.99-14.996 54.352-49.704 54.352h-2.462V73.127z"/></svg>
+    </a>
+  </div>
+  <div class="footer-links">
+    <a href="about.html">About the Project</a>
+  </div>
+</footer>
+
 </body>
 </html>
