@@ -62,4 +62,131 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .section-label {
+      color: #A398B3;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .article-title {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+      color: #1D1D1D;
+    }
+
+    .article-preview {
+      font-size: 0.95rem;
+      margin-bottom: 10px;
+    }
+
+    .article-date {
+      font-size: 0.8rem;
+      color: #555;
+    }
+
+    .footer {
+      margin-top: 80px;
+      padding: 40px 0 20px;
+    }
+
+    .footer a {
+      margin-right: 30px;
+      text-decoration: none;
+      color: #1D1D1D;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        padding: 20px;
+        justify-content: space-around;
+      }
+
+      .main-content {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="site-title">Migration Grounds</div>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <a href="#">Who Moves?</a>
+      <a href="#">Who Stays?</a>
+      <a href="#">Across CEE</a>
+      <a href="#">Maps & Gaps</a>
+      <a href="#">Between the Lines</a>
+    </nav>
+
+    <main class="main-content">
+      <div class="grid">
+        <div class="card">
+          <div class="section-label">Who Moves?</div>
+          <div class="article-title">The Patterns of Migration</div>
+          <div class="article-preview">Exploring key demographic trends among recent migrants...</div>
+          <div class="article-date">April 12, 2024</div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Who Stays?</div>
+          <div class="article-title">Understanding Retention</div>
+          <div class="article-preview">Why do some professionals remain despite push factors?</div>
+          <div class="article-date">May 3, 2024</div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Across CEE</div>
+          <div class="article-title">Regional Migration Trends</div>
+          <div class="article-preview">Comparative insights across Poland, Hungary and Romania.</div>
+          <div class="article-date">March 29, 2024</div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Maps & Gaps</div>
+          <div class="article-title">Visualizing Flows</div>
+          <div class="article-preview">Data-driven maps showing emerging corridors of mobility.</div>
+          <div class="article-date">April 9, 2024</div>
+        </div>
+
+        <div class="card">
+          <div class="section-label">Between the Lines</div>
+          <div class="article-title">Cultural Contradictions</div>
+          <div class="article-preview">What does everyday discourse say about migration identities?</div>
+          <div class="article-date">April 25, 2024</div>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <a href="#">About the Project</a>
+        <a href="connect.html">Connect</a>
+      </footer>
+    </main>
+  </div>
+
+</body>
+</html>
