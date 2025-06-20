@@ -1,111 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     body {
       font-family: 'Libre Baskerville', serif;
-      line-height: 1.6;
-      color: #1D1D1D;
       background-color: #EFF1F3;
+      color: #1D1D1D;
     }
 
-    .header {
+    header {
       text-align: center;
       padding: 40px 0;
-      width: 100%;
-      background-color: #EFF1F3;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 2.5rem;
-      color: #1D1D1D;
+      font-size: 3rem;
       font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    .site-title:hover {
+      text-transform: uppercase;
       color: #1D1D1D;
+      text-decoration: none;
     }
 
     .container {
       display: flex;
-      min-height: calc(100vh - 160px);
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     .sidebar {
-      background-color: #EED7A1;
       width: 250px;
-      padding: 20px 0;
-      height: 100vh;
-      position: sticky;
-      top: 0;
+      background-color: #EED7A1;
+      padding: 20px;
+      flex-shrink: 0;
     }
 
-    .sidebar-nav {
+    .sidebar ul {
       list-style: none;
     }
 
-    .sidebar-nav li {
-      margin-bottom: 15px;
-    }
-
-    .sidebar-nav a {
+    .sidebar a {
       display: block;
-      padding: 12px 20px;
-      color: #1D1D1D;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
-      font-family: 'Libre Baskerville', serif;
-    }
-
-    .sidebar-nav a:hover {
-      background-color: rgba(29, 29, 29, 0.1);
-    }
-
-    .sidebar-nav a.active {
-      background-color: rgba(29, 29, 29, 0.15);
+      color: #1D1D1D;
+      padding: 12px 0;
     }
 
     .main-content {
-      flex: 1;
+      flex-grow: 1;
       padding: 40px;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
-    .content-grid {
+    .preview-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
-      margin-bottom: 60px;
     }
 
-    .content-card {
-      background: #f9f9f9;
+    .preview-card {
+      background-color: #f9f9f9;
       border-radius: 8px;
       padding: 25px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
-    .card-title {
+    .preview-title {
+      font-family: 'Lora', serif;
+      font-size: 1.4rem;
       color: #A398B3;
-      font-size: 1.3rem;
       font-weight: bold;
       margin-bottom: 15px;
-      font-family: 'Lora', serif;
     }
 
     .article-list {
@@ -119,8 +94,6 @@
     .article-list a {
       color: #1D1D1D;
       text-decoration: none;
-      font-family: 'Libre Baskerville', serif;
-      font-weight: 500;
     }
 
     .article-list a:hover {
@@ -128,26 +101,18 @@
     }
 
     .footer {
-      background-color: transparent;
-      padding: 30px 0;
-      text-align: left;
+      margin-top: 60px;
     }
 
-    .footer-links {
-      display: flex;
-      justify-content: flex-start;
-      gap: 30px;
-    }
-
-    .footer-links a {
+    .footer a {
+      font-weight: bold;
       color: #1D1D1D;
       text-decoration: none;
-      font-weight: bold;
-      font-family: 'Libre Baskerville', serif;
+      margin-right: 30px;
     }
 
-    .footer-links a:hover {
-      color: #1D1D1D;
+    .footer a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
@@ -157,94 +122,79 @@
 
       .sidebar {
         width: 100%;
-        height: auto;
-        position: static;
+        text-align: center;
       }
 
-      .sidebar-nav {
-        display: flex;
-        overflow-x: auto;
-        padding: 0 20px;
-      }
-
-      .sidebar-nav li {
-        margin-bottom: 0;
-        margin-right: 15px;
-        white-space: nowrap;
+      .preview-grid {
+        grid-template-columns: 1fr;
       }
 
       .main-content {
         padding: 20px;
       }
-
-      .site-title {
-        font-size: 2rem;
-      }
-
-      .content-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .footer-links {
-        flex-direction: column;
-        gap: 15px;
-      }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <a href="#" class="site-title">MIGRATION GROUNDS</a>
+  <header>
+    <a href="index.html" class="site-title">Migration Grounds</a>
   </header>
 
   <div class="container">
-    <nav class="sidebar">
-      <ul class="sidebar-nav">
-        <li><a href="#" class="active">Home</a></li>
-        <li><a href="#">Who Moves</a></li>
-        <li><a href="#">Where To</a></li>
-        <li><a href="#">Why Leave</a></li>
-        <li><a href="#">How Move</a></li>
-        <li><a href="#">What Brings</a></li>
-        <li><a href="#">Resources</a></li>
+    <aside class="sidebar">
+      <ul>
+        <li><a href="who-moves.html">Who Moves?</a></li>
+        <li><a href="who-stays.html">Who Stays?</a></li>
+        <li><a href="across-cee.html">Across CEE</a></li>
+        <li><a href="maps-gaps.html">Maps & Gaps</a></li>
+        <li><a href="between-lines.html">Between the Lines</a></li>
       </ul>
-    </nav>
+    </aside>
 
     <main class="main-content">
-      <div class="content-grid">
-        <div class="content-card">
-          <h2 class="card-title">Who Moves</h2>
+      <div class="preview-grid">
+        <div class="preview-card">
+          <div class="preview-title">Who Moves?</div>
           <ul class="article-list">
-            <li><a href="#">Demographics of Migration</a></li>
-            <li><a href="#">Age and Gender Patterns</a></li>
-            <li><a href="#">Educational Background</a></li>
-            <li><a href="#">Professional Profiles</a></li>
+            <li><a href="#">The Patterns of Migration</a></li>
+            <li><a href="#">Demographic Shifts</a></li>
           </ul>
         </div>
-        <!-- Similar structure for other categories -->
-      </div>
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="#">About the Project</a>
-          <a href="connect.html">Connect</a>
+
+        <div class="preview-card">
+          <div class="preview-title">Who Stays?</div>
+          <ul class="article-list">
+            <li><a href="#">Understanding Retention Factors</a></li>
+          </ul>
         </div>
-      </footer>
+
+        <div class="preview-card">
+          <div class="preview-title">Across CEE</div>
+          <ul class="article-list">
+            <li><a href="#">Regional Migration Trends</a></li>
+          </ul>
+        </div>
+
+        <div class="preview-card">
+          <div class="preview-title">Maps & Gaps</div>
+          <ul class="article-list">
+            <li><a href="#">Visualizing Migration Flows</a></li>
+          </ul>
+        </div>
+
+        <div class="preview-card">
+          <div class="preview-title">Between the Lines</div>
+          <ul class="article-list">
+            <li><a href="#">Narratives and Hidden Meanings</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        <a href="about.html">About the Project</a>
+        <a href="connect.html">Connect</a>
+      </div>
     </main>
   </div>
-
-  <script>
-    document.querySelector('.site-title').addEventListener('click', function(e) {
-      e.preventDefault();
-      window.location.reload();
-    });
-
-    document.querySelectorAll('.sidebar-nav a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        document.querySelectorAll('.sidebar-nav a').forEach(l => l.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-  </script>
 </body>
 </html>
