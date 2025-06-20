@@ -14,216 +14,52 @@
 
     body {
       font-family: 'Libre Baskerville', serif;
-      line-height: 1.6;
-      color: #1D1D1D;
       background-color: #EFF1F3;
+      color: #1D1D1D;
     }
 
     header {
-      background-color: #EFF1F3;
-      width: 100%;
-      padding: 60px 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      text-align: center;
+      padding: 60px 20px 30px;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: bold;
-      text-transform: uppercase;
       color: #1D1D1D;
-      text-align: center;
-      text-decoration: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
     }
 
     .container {
       display: flex;
-      min-height: calc(100vh - 160px);
+      min-height: 100vh;
     }
 
     .sidebar {
       background-color: #EED7A1;
-      width: 250px;
-      padding: 20px 0;
-      position: sticky;
-      top: 0;
-      height: fit-content;
+      padding: 40px 20px;
+      width: 180px;
+      flex-shrink: 0;
     }
 
-    .sidebar-nav {
-      list-style: none;
-    }
-
-    .sidebar-nav li {
-      margin-bottom: 15px;
-    }
-
-    .sidebar-nav a {
+    .sidebar a {
       display: block;
-      padding: 12px 20px;
-      color: #1D1D1D;
+      margin-bottom: 20px;
+      color: #A398B3;
       text-decoration: none;
       font-weight: bold;
+      font-family: 'Lora', serif;
     }
 
     .main-content {
       flex: 1;
-      padding: 40px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .content-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-bottom: 60px;
-    }
-
-    .content-card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 25px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .card-title {
-      color: #A398B3;
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-      font-family: 'Lora', serif;
-    }
-
-    .article-title {
-      font-weight: bold;
-      color: #1D1D1D;
-      margin-bottom: 5px;
-    }
-
-    .article-excerpt {
-      font-size: 0.95rem;
-      color: #1D1D1D;
-    }
-
-    .footer {
-      background-color: transparent;
-      padding: 50px 0 30px;
-    }
-
-    .footer-links {
+      padding: 40px 30px;
       display: flex;
-      justify-content: flex-start;
-      gap: 30px;
+      flex-direction: column;
     }
 
-    .footer-links a {
-      color: #1D1D1D;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        flex-direction: column;
-      }
-
-      .sidebar {
-        width: 100%;
-        position: static;
-        padding: 15px 0;
-      }
-
-      .sidebar-nav {
-        display: flex;
-        overflow-x: auto;
-        padding: 0 20px;
-      }
-
-      .sidebar-nav li {
-        margin-bottom: 0;
-        margin-right: 15px;
-        white-space: nowrap;
-      }
-
-      .main-content {
-        padding: 20px;
-      }
-
-      .site-title {
-        font-size: 2.5rem;
-      }
-
-      .content-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .footer-links {
-        flex-direction: column;
-        gap: 15px;
-      }
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <a href="index.html" class="site-title">Migration Grounds</a>
-  </header>
-
-  <div class="container">
-    <nav class="sidebar">
-      <ul class="sidebar-nav">
-        <li><a href="#">Who Moves?</a></li>
-        <li><a href="#">Who Stays?</a></li>
-        <li><a href="#">Across CEE</a></li>
-        <li><a href="#">Maps & Gaps</a></li>
-        <li><a href="#">Between the Lines</a></li>
-      </ul>
-    </nav>
-
-    <main class="main-content">
-      <div class="content-grid">
-        <div class="content-card">
-          <h2 class="card-title">Who Moves?</h2>
-          <div class="article-title">Young Professionals on the Move</div>
-          <p class="article-excerpt">A look into the age and skill profile of recent emigrants from Romania...</p>
-        </div>
-
-        <div class="content-card">
-          <h2 class="card-title">Who Stays?</h2>
-          <div class="article-title">Rooted or Stuck?</div>
-          <p class="article-excerpt">Exploring why some skilled workers choose to remain in their home counties.</p>
-        </div>
-
-        <div class="content-card">
-          <h2 class="card-title">Across CEE</h2>
-          <div class="article-title">Comparative Insights from Poland and Bulgaria</div>
-          <p class="article-excerpt">What patterns are shared and what diverges in skilled migration trends?</p>
-        </div>
-
-        <div class="content-card">
-          <h2 class="card-title">Maps & Gaps</h2>
-          <div class="article-title">Visualizing County-Level Brain Drain</div>
-          <p class="article-excerpt">Geographic trends in human capital loss, through thematic cartography.</p>
-        </div>
-
-        <div class="content-card">
-          <h2 class="card-title">Between the Lines</h2>
-          <div class="article-title">Invisible Stories</div>
-          <p class="article-excerpt">What isn’t said in statistics: voices, contradictions, and quiet departures.</p>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <div class="footer-links">
-          <a href="about.html">About the Project</a>
-          <a href="connect.html">Connect</a>
-        </div>
-      </footer>
-    </main>
-  </div>
-</body>
-</html>
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr
