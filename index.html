@@ -4,123 +4,124 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
+      margin: 0;
       font-family: 'Libre Baskerville', serif;
       background-color: #EFF1F3;
       color: #1D1D1D;
-      height: 100vh;
-      overflow: hidden;
     }
 
     header {
+      background: #fff;
+      padding: 60px 20px 40px;
       text-align: center;
-      padding: 30px 20px 10px;
-      background-color: #EFF1F3;
     }
 
     .site-title {
       font-family: 'Lora', serif;
       font-size: 3.5rem;
+      font-weight: bold;
       color: #1D1D1D;
-      font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
-      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
     }
 
     .container {
       display: flex;
-      height: calc(100vh - 100px);
+      min-height: 100vh;
     }
 
     .sidebar {
-      width: 250px;
+      width: 240px;
       background-color: #EED7A1;
-      padding: 30px 10px;
+      padding: 30px 20px;
+      flex-shrink: 0;
     }
 
-    .sidebar-nav {
-      list-style: none;
-    }
-
-    .sidebar-nav li {
-      margin-bottom: 20px;
-    }
-
-    .sidebar-nav a {
-      font-family: 'Libre Baskerville', serif;
-      text-decoration: none;
-      color: #1D1D1D;
-      font-weight: bold;
+    .sidebar a {
       display: block;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #1D1D1D;
+      text-decoration: none;
     }
 
     .main-content {
       flex: 1;
-      padding: 30px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 40px 30px;
     }
 
     .preview-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 30px;
-      overflow-y: auto;
     }
 
-    .preview-box {
-      background-color: #fff;
-      padding: 20px;
+    .preview-card {
+      background: #fff;
+      padding: 25px;
       border-radius: 8px;
-      height: 100%;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
 
-    .section-title {
-      font-family: 'Lora', serif;
-      font-size: 1.4rem;
+    .preview-title {
       color: #A398B3;
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
     }
 
-    .article-preview {
+    .preview-article {
+      font-size: 1rem;
+      font-weight: 600;
       color: #1D1D1D;
-    }
-
-    .article-preview b {
-      display: block;
       margin-bottom: 6px;
     }
 
-    footer {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      gap: 30px;
-      padding: 20px 10px 0;
+    .preview-snippet {
+      font-size: 0.9rem;
+      color: #1D1D1D;
     }
 
-    .footer-link {
+    footer {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+
+    .footer-section {
+      margin-top: 60px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
       color: #1D1D1D;
       font-weight: bold;
       text-decoration: none;
     }
 
-    .icon-link img {
-      height: 24px;
-      width: 24px;
-      vertical-align: middle;
+    .social-icons {
+      display: flex;
+      gap: 25px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      font-size: 1.4rem;
+      color: #1D1D1D;
     }
 
     @media (max-width: 768px) {
@@ -132,96 +133,78 @@
         width: 100%;
         display: flex;
         overflow-x: auto;
-        padding: 15px 10px;
       }
 
-      .sidebar-nav {
-        display: flex;
-        gap: 20px;
-      }
-
-      .main-content {
-        padding: 20px;
+      .sidebar a {
+        margin-right: 20px;
       }
 
       .preview-grid {
         grid-template-columns: 1fr;
-        overflow-y: auto;
-      }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 20px;
-        gap: 10px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="site-title" onclick="window.location.href='index.html'">Migration Grounds</div>
+    <a href="index.html" class="site-title">Migration Grounds</a>
   </header>
 
   <div class="container">
-    <aside class="sidebar">
-      <ul class="sidebar-nav">
-        <li><a href="who-moves.html">Who Moves?</a></li>
-        <li><a href="who-stays.html">Who Stays?</a></li>
-        <li><a href="across-cee.html">Across CEE</a></li>
-        <li><a href="maps-gaps.html">Maps & Gaps</a></li>
-        <li><a href="between-lines.html">Between the Lines</a></li>
-      </ul>
-    </aside>
+    <nav class="sidebar">
+      <a href="#">Who Moves</a>
+      <a href="#">Who Stays</a>
+      <a href="#">Across CEE</a>
+      <a href="#">Maps & Gaps</a>
+      <a href="#">Between the Lines</a>
+    </nav>
 
     <main class="main-content">
       <div class="preview-grid">
-        <div class="preview-box">
-          <div class="section-title">Who Moves?</div>
-          <div class="article-preview">
-            <b>New Waves of Youth Migration</b>
-            Young professionals are reshaping destination trends in Eastern Europe.
-          </div>
+        <div class="preview-card">
+          <div class="preview-title">Who Moves</div>
+          <div class="preview-article">The Patterns of Migration</div>
+          <div class="preview-snippet">An overview of recent demographic shifts across age and skill categories.</div>
         </div>
-        <div class="preview-box">
-          <div class="section-title">Who Stays?</div>
-          <div class="article-preview">
-            <b>Stayers and Local Innovation</b>
-            Those who remain play a crucial role in regional development.
-          </div>
+
+        <div class="preview-card">
+          <div class="preview-title">Who Stays</div>
+          <div class="preview-article">Rooted in Place</div>
+          <div class="preview-snippet">Exploring the motivations and barriers for those who remain in Romania.</div>
         </div>
-        <div class="preview-box">
-          <div class="section-title">Across CEE</div>
-          <div class="article-preview">
-            <b>Trends Across the Region</b>
-            A comparative glance at cross-border labor mobility from Romania to Poland.
-          </div>
+
+        <div class="preview-card">
+          <div class="preview-title">Across CEE</div>
+          <div class="preview-article">Regional Trends</div>
+          <div class="preview-snippet">Comparing migration patterns across Central and Eastern European countries.</div>
         </div>
-        <div class="preview-box">
-          <div class="section-title">Maps & Gaps</div>
-          <div class="article-preview">
-            <b>Missing Data, Missing People?</b>
-            Visualizing knowledge gaps in skilled migration flows.
-          </div>
+
+        <div class="preview-card">
+          <div class="preview-title">Maps & Gaps</div>
+          <div class="preview-article">Visualizing Mobility</div>
+          <div class="preview-snippet">Cartographic insights into labor flows, educational outflows, and more.</div>
         </div>
-        <div class="preview-box">
-          <div class="section-title">Between the Lines</div>
-          <div class="article-preview">
-            <b>What We Don't Say</b>
-            Migration narratives shaped by silences, omissions, and contradictions.
-          </div>
+
+        <div class="preview-card">
+          <div class="preview-title">Between the Lines</div>
+          <div class="preview-article">Narrating the Unseen</div>
+          <div class="preview-snippet">Personal reflections, discursive tensions, and the affective side of migration.</div>
         </div>
       </div>
 
-      <footer>
-        <a class="footer-link" href="about.html">About the Project</a>
-        <a class="footer-link" href="connect.html">Connect</a>
-        <span class="icon-link">
-          <a href="mailto:natalia.malancu@gmail.com"><img src="gmail-icon.png" alt="Gmail" /></a>
-          <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn" /></a>
-          <a href="https://orcid.org/0000-0002-3576-2422" target="_blank"><img src="orcid-icon.png" alt="ORCID" /></a>
-        </span>
-      </footer>
+      <div class="footer-section">
+        <div class="footer-links">
+          <a href="about.html">About the Project</a>
+          <div>
+            <strong>Connect:</strong>
+            <div class="social-icons">
+              <a href="mailto:natalia.malancu@gmail.com" title="Email">&#x2709;</a>
+              <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">&#x1F465;</a>
+              <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">&#x1F52C;</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 </body>
