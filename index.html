@@ -2,10 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --dusty-purple: #A398B3;
+      --dark-gray: #1D1D1D;
+      --background: #EFF1F3;
+      --ochre: #EED7A1;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,107 +21,106 @@
 
     body {
       font-family: 'Libre Baskerville', serif;
-      background-color: #EFF1F3;
-      color: #1D1D1D;
+      background-color: var(--background);
+      color: var(--dark-gray);
+      line-height: 1.6;
     }
 
-    header {
+    .header {
       text-align: center;
-      padding: 50px 20px 30px;
-      background-color: #EFF1F3;
+      padding: 60px 20px 30px;
+      background-color: var(--background);
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 3rem;
-      color: #1D1D1D;
+      font-size: 4.5rem;
+      color: var(--dark-gray);
       text-transform: uppercase;
       font-weight: 700;
       text-decoration: none;
-      display: inline-block;
     }
 
     .container {
       display: flex;
+      flex-direction: row;
+      min-height: 100vh;
     }
 
     .sidebar {
-      background-color: #EED7A1;
-      width: 220px;
-      padding: 40px 20px;
+      width: 250px;
+      background-color: var(--ochre);
+      padding: 20px 0;
       position: sticky;
       top: 0;
-      height: 100vh;
+      height: fit-content;
     }
 
-    .sidebar-nav {
+    .sidebar ul {
       list-style: none;
+      padding: 0 20px;
     }
 
-    .sidebar-nav li {
-      margin-bottom: 20px;
+    .sidebar li {
+      margin-bottom: 15px;
     }
 
-    .sidebar-nav a {
-      color: #1D1D1D;
-      font-weight: bold;
+    .sidebar a {
       text-decoration: none;
+      color: var(--dark-gray);
+      font-weight: bold;
     }
 
     .main-content {
       flex: 1;
-      padding: 40px;
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
-    .content-grid {
+    .preview-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr 1fr;
       gap: 30px;
+      margin-bottom: 100px;
     }
 
-    .preview-card {
-      background-color: #fff;
-      padding: 20px;
+    .preview-box {
+      background: #fff;
       border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 25px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .section-title {
-      font-size: 1.2rem;
-      color: #A398B3;
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      color: var(--dusty-purple);
       font-weight: bold;
       margin-bottom: 10px;
-      font-family: 'Lora', serif;
     }
 
-    .preview-title {
+    .latest-article-title {
       font-weight: bold;
-      margin-bottom: 8px;
-      font-family: 'Lora', serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
     }
 
-    .preview-text {
-      font-size: 0.95rem;
-    }
-
-    footer {
-      margin-top: 100px;
-      padding-top: 40px;
-      border-top: 1px solid #ccc;
-    }
-
-    .footer-links {
+    .footer {
+      margin-top: auto;
+      padding: 30px 0;
       display: flex;
+      justify-content: flex-start;
       gap: 30px;
     }
 
-    .footer-links a {
-      color: #1D1D1D;
+    .footer a {
       text-decoration: none;
+      color: var(--dark-gray);
       font-weight: bold;
     }
 
-    /* Responsive two columns */
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -122,82 +128,83 @@
 
       .sidebar {
         width: 100%;
-        height: auto;
+        position: static;
       }
 
-      .content-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .content-grid {
+      .preview-grid {
         grid-template-columns: 1fr;
       }
 
       .site-title {
-        font-size: 2.2rem;
+        font-size: 3rem;
+      }
+
+      .footer {
+        flex-direction: column;
+        gap: 15px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <header class="header">
     <a href="index.html" class="site-title">Migration Grounds</a>
   </header>
 
   <div class="container">
+
     <nav class="sidebar">
-      <ul class="sidebar-nav">
-        <li><a href="#">Who Moves?</a></li>
-        <li><a href="#">Who Stays?</a></li>
-        <li><a href="#">Across CEE</a></li>
-        <li><a href="#">Maps & Gaps</a></li>
-        <li><a href="#">Between the Lines</a></li>
+      <ul>
+        <li><a href="who-moves.html">Who Moves</a></li>
+        <li><a href="who-stays.html">Who Stays</a></li>
+        <li><a href="across-cee.html">Across CEE</a></li>
+        <li><a href="maps-gaps.html">Maps & Gaps</a></li>
+        <li><a href="between-lines.html">Between the Lines</a></li>
       </ul>
     </nav>
 
     <main class="main-content">
-      <div class="content-grid">
-        <div class="preview-card">
-          <div class="section-title">Who Moves?</div>
-          <div class="preview-title">The Patterns of Migration</div>
-          <div class="preview-text">Exploring demographic dynamics behind emigration. April 12, 2024</div>
+      <div class="preview-grid">
+
+        <div class="preview-box">
+          <div class="section-title">Who Moves</div>
+          <div class="latest-article-title">The Patterns of Migration</div>
+          <p>A short look at the age, gender, and education structures of Romanian migrants in 2024.</p>
         </div>
 
-        <div class="preview-card">
-          <div class="section-title">Who Stays?</div>
-          <div class="preview-title">Understanding Retention Factors</div>
-          <div class="preview-text">What keeps skilled people in place and how that changes. May 5, 2024</div>
+        <div class="preview-box">
+          <div class="section-title">Who Stays</div>
+          <div class="latest-article-title">Resilience in Small Towns</div>
+          <p>Why some communities resist out-migration despite socioeconomic decline.</p>
         </div>
 
-        <div class="preview-card">
+        <div class="preview-box">
           <div class="section-title">Across CEE</div>
-          <div class="preview-title">Trends in Central and Eastern Europe</div>
-          <div class="preview-text">Comparative data and policy impacts. March 15, 2024</div>
+          <div class="latest-article-title">Migration Narratives in Poland</div>
+          <p>Exploring shared concerns and differences in how CEE countries address mobility.</p>
         </div>
 
-        <div class="preview-card">
+        <div class="preview-box">
           <div class="section-title">Maps & Gaps</div>
-          <div class="preview-title">Visualizing Migration Flows</div>
-          <div class="preview-text">New tools to map mobility. March 30, 2024</div>
+          <div class="latest-article-title">Where the Skilled Go</div>
+          <p>Geospatial analysis of skilled migration from Romania by county-level data.</p>
         </div>
 
-        <div class="preview-card">
+        <div class="preview-box">
           <div class="section-title">Between the Lines</div>
-          <div class="preview-title">Narratives and Contradictions</div>
-          <div class="preview-text">Critical takes and personal reflections. April 20, 2024</div>
+          <div class="latest-article-title">Ambivalence and Aspiration</div>
+          <p>A personal essay on watching others leave — and staying behind.</p>
         </div>
+
       </div>
 
       <footer class="footer">
-        <div class="footer-links">
-          <a href="#">About the Project</a>
-          <a href="connect.html">Connect</a>
-        </div>
+        <a href="about.html">About the Project</a>
+        <a href="connect.html">Connect</a>
       </footer>
     </main>
+
   </div>
 
 </body>
