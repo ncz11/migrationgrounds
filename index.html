@@ -19,41 +19,40 @@
       box-sizing: border-box;
     }
 
-    body {
+    html, body {
+      height: 100%;
       font-family: 'Libre Baskerville', serif;
       background-color: var(--background);
       color: var(--dark-gray);
-      line-height: 1.6;
+      overflow: hidden;
     }
 
     .header {
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 20px 10px 10px;
       background-color: var(--background);
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 4.5rem;
+      font-size: 3.5rem;
       color: var(--dark-gray);
       text-transform: uppercase;
       font-weight: 700;
       text-decoration: none;
+      white-space: nowrap;
     }
 
     .container {
       display: flex;
-      flex-direction: row;
-      min-height: 100vh;
+      height: calc(100vh - 90px);
     }
 
     .sidebar {
-      width: 250px;
+      width: 230px;
       background-color: var(--ochre);
       padding: 20px 0;
-      position: sticky;
-      top: 0;
-      height: fit-content;
+      overflow-y: auto;
     }
 
     .sidebar ul {
@@ -62,7 +61,7 @@
     }
 
     .sidebar li {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
 
     .sidebar a {
@@ -73,46 +72,50 @@
 
     .main-content {
       flex: 1;
-      padding: 40px 20px;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      overflow-y: auto;
     }
 
     .preview-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 30px;
-      margin-bottom: 100px;
+      gap: 15px;
+      height: 100%;
     }
 
     .preview-box {
       background: #fff;
-      border-radius: 8px;
-      padding: 25px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      padding: 15px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .section-title {
       font-family: 'Lora', serif;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--dusty-purple);
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .latest-article-title {
       font-weight: bold;
-      font-size: 1rem;
-      margin-bottom: 6px;
+      font-size: 0.95rem;
+      margin-bottom: 4px;
     }
 
     .footer {
-      margin-top: auto;
-      padding: 30px 0;
+      padding-top: 10px;
       display: flex;
       justify-content: flex-start;
-      gap: 30px;
+      gap: 20px;
+      font-size: 0.9rem;
     }
 
     .footer a {
@@ -122,26 +125,40 @@
     }
 
     @media (max-width: 768px) {
+      html, body {
+        overflow: auto;
+      }
+
       .container {
         flex-direction: column;
+        height: auto;
       }
 
       .sidebar {
         width: 100%;
-        position: static;
+        display: flex;
+        overflow-x: auto;
+        padding: 10px;
+      }
+
+      .sidebar ul {
+        display: flex;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
       }
 
       .preview-grid {
         grid-template-columns: 1fr;
+        height: auto;
       }
 
       .site-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
       }
 
-      .footer {
-        flex-direction: column;
-        gap: 15px;
+      .main-content {
+        padding: 10px;
       }
     }
   </style>
@@ -197,12 +214,12 @@
           <p>A personal essay on watching others leave — and staying behind.</p>
         </div>
 
-      </div>
+        <div class="preview-box footer">
+          <a href="about.html">About the Project</a>
+          <a href="connect.html">Connect</a>
+        </div>
 
-      <footer class="footer">
-        <a href="about.html">About the Project</a>
-        <a href="connect.html">Connect</a>
-      </footer>
+      </div>
     </main>
 
   </div>
