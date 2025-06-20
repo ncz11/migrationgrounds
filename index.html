@@ -1,108 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Libre Baskerville', serif;
-      background-color: #EFF1F3;
-      color: #1D1D1D;
-    }
-    .sidebar {
-      background-color: #D9AD5C;
-      width: 250px;
-      position: fixed;
-      height: 100%;
-      padding: 20px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .nav-top, .nav-bottom {
-      display: flex;
-      flex-direction: column;
-    }
-    .sidebar h1 {
-      font-family: 'Lora', serif;
-      font-size: 28px;
-      color: #1D1D1D;
-      margin-bottom: 1.5rem;
-    }
-    .sidebar a {
-      display: block;
-      color: #1D1D1D;
-      text-decoration: none;
-      margin: 8px 0;
-      font-weight: bold;
-      font-size: 1rem;
-    }
-    .content {
-      margin-left: 270px;
-      padding: 40px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px;
-    }
-    .section {
-      padding: 20px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .section h2 {
-      font-family: 'Lora', serif;
-      color: #9B8CA4;
-      font-weight: bold;
-      font-size: 20px;
-      margin-top: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="sidebar">
-    <div class="nav-top">
+  <div class="container">
+    <aside class="sidebar">
       <h1>Migration Grounds</h1>
-      <a href="#">Who Moves?</a>
-      <a href="#">Who Stays?</a>
-      <a href="#">Across CEE</a>
-      <a href="#">Maps & Gaps</a>
-      <a href="#">Between the Lines</a>
-    </div>
-    <div class="nav-bottom">
-      <a href="#">About the Project</a>
-      <a href="#">Contact</a>
-    </div>
-  </div>
-  <div class="content">
-    <div class="grid">
-      <div class="section">
-        <h2>Who Moves?</h2>
-        <p>Content preview for Who Moves.</p>
-      </div>
-      <div class="section">
-        <h2>Who Stays?</h2>
-        <p>Content preview for Who Stays.</p>
-      </div>
-      <div class="section">
-        <h2>Across CEE</h2>
-        <p>Content preview for Across CEE.</p>
-      </div>
-      <div class="section">
-        <h2>Maps & Gaps</h2>
-        <p>Content preview for Maps & Gaps.</p>
-      </div>
-      <div class="section">
-        <h2>Between the Lines</h2>
-        <p>Content preview for Between the Lines.</p>
-      </div>
-    </div>
+      <nav>
+        <ul>
+          <li><a href="who-moves/index.html">Who Moves?</a></li>
+          <li><a href="who-stays/index.html">Who Stays?</a></li>
+          <li><a href="across-cee/index.html">Across CEE</a></li>
+          <li><a href="maps-gaps/index.html">Maps & Gaps</a></li>
+          <li><a href="between-the-lines/index.html">Between the Lines</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <section class="preview">
+        <h2 class="section-title">Who Moves?</h2>
+        <h3 class="post-title">The Patterns of Migration</h3>
+        <p>Exploring the key factors influencing high-skilled migration across CEE regions.</p>
+      </section>
+      <section class="preview">
+        <h2 class="section-title">Who Stays?</h2>
+        <h3 class="post-title">Understanding Retention Factors</h3>
+        <p>Examining the reasons why some professionals choose to remain despite opportunities abroad.</p>
+      </section>
+      <section class="preview">
+        <h2 class="section-title">Across CEE</h2>
+        <h3 class="post-title">Trends in Central and Eastern Europe</h3>
+        <p>An analysis of recent migration trends in the CEE region and their drivers.</p>
+      </section>
+      <section class="preview">
+        <h2 class="section-title">Maps & Gaps</h2>
+        <h3 class="post-title">Visualizing Migration Flows</h3>
+        <p>A look at new spatial and statistical tools for mapping population change.</p>
+      </section>
+      <section class="preview">
+        <h2 class="section-title">Between the Lines</h2>
+        <h3 class="post-title">Policymaking in Migration</h3>
+        <p>Insights into the dynamics of migration policy and ideological responses in CEE.</p>
+      </section>
+      <footer>
+        <div class="footer-links">
+          <h3>About the Project</h3>
+          <h3>Connect</h3>
+          <p>Email: <a href="mailto:natalia.malancu@gmail.com">natalia.malancu@gmail.com</a></p>
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank">Profile</a></p>
+          <p>ORCID: <a href="https://orcid.org/0000-0002-3576-2422" target="_blank">0000-0002-3576-2422</a></p>
+        </div>
+      </footer>
+    </main>
   </div>
 </body>
 </html>
