@@ -1,62 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: 'Libre Baskerville', serif;
-      background-color: #EFF1F3;
+      background-color: #FAFAF8;
       color: #1D1D1D;
+      display: flex;
     }
-    .sidebar {
-      position: fixed;
-      top: 0;
-      left: 0;
+    nav {
+      background-color: #F1C563;
       width: 220px;
-      height: 100%;
-      background-color: #D9AD5C;
-      padding: 20px;
-      box-sizing: border-box;
+      min-height: 100vh;
+      padding: 2rem 1rem;
     }
-    .sidebar h1 {
-      font-family: 'Lora', serif;
-      font-size: 20px;
-      margin-bottom: 30px;
-    }
-    .sidebar a {
+    nav a {
       display: block;
       color: #1D1D1D;
       text-decoration: none;
-      margin-bottom: 12px;
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
     }
-    .content {
-      margin-left: 240px;
-      padding: 30px;
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      flex: 1;
+      padding: 3rem;
+      background-color: white;
+    }
+    h1 {
+      font-family: 'Lora', serif;
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 2.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+    .article {
+      font-family: 'Libre Baskerville', serif;
+    }
+    .section-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0.2rem 0;
+    }
+    .desc {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+    .date {
+      font-size: 0.8rem;
+      color: #555;
     }
     footer {
-      margin-top: 40px;
-      font-size: 14px;
       text-align: center;
-      color: #666;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    footer a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #1D1D1D;
     }
   </style>
 </head>
 <body>
-  <div class="sidebar">
-    <h1>Migration Grounds</h1>
-    <a href="who-moves.html">Who Moves?</a>
-    <a href="who-stays.html">Who Stays?</a>
-    <a href="across-cee.html">Across CEE</a>
-    <a href="maps-gaps.html">Maps & Gaps</a>
-    <a href="between-the-lines.html">Between the Lines</a>
-  </div>
-  <div class="content">
-    <h2>Welcome to Migration Grounds</h2>
-    <p>This site explores migration and demographic change in Romania and Central & Eastern Europe, with a focus on data, analysis, and critical reflection.</p>
+  <nav>
+    <a href="#">Who Moves?</a>
+    <a href="#">Who Stays?</a>
+    <a href="#">Across CEE</a>
+    <a href="#">Maps & Gaps</a>
+    <a href="#">Between the Lines</a>
+  </nav>
+  <div class="container">
+    <h1>MIGRATION GROUNDS</h1>
+    <div class="grid">
+      <div class="article">
+        <div class="section-label" style="color:#9B8CA4;">WHO MOVES?</div>
+        <div class="title">The Patterns of Migration</div>
+        <div class="desc">Explaining the key factors shaping migration flows</div>
+        <div class="date">April 12, 2022</div>
+      </div>
+      <div class="article">
+        <div class="section-label" style="color:#9B8CA4;">WHO STAYS?</div>
+        <div class="title">Understanding Retention Factors</div>
+        <div class="desc">Examining the reasons why migrants do or do not return home</div>
+        <div class="date">November 3, 2021</div>
+      </div>
+      <div class="article">
+        <div class="section-label" style="color:#9B8CA4;">ACROSS CEE</div>
+        <div class="title">Trends in Central and Eastern Europe</div>
+        <div class="desc">An analysis of recent migration trends in CEE</div>
+        <div class="date">July 20, 2021</div>
+      </div>
+      <div class="article">
+        <div class="section-label" style="color:#9B8CA4;">MAPS & GAPS</div>
+        <div class="title">Visualizing Migration Flows</div>
+        <div class="desc">A look at how maps and data can be used to explore global migration</div>
+        <div class="date">March 9, 2020</div>
+      </div>
+      <div class="article">
+        <div class="section-label" style="color:#9B8CA4;">BETWEEN THE LINES</div>
+        <div class="title">Between the Lines</div>
+        <div class="desc">Insights into the human experience of migration beyond the data</div>
+        <div class="date">June 25, 2018</div>
+      </div>
+      <div class="article">
+        <div class="section-label" style="color:#9B8CA4;">POLICYMAKING IN</div>
+        <div class="title">Policymaking in Migration</div>
+        <div class="desc">An overview of policy measures designed to manage migration trends</div>
+        <div class="date">February 19, 2016</div>
+      </div>
+    </div>
     <footer>
-      <p><a href="#">About the Project</a> | <a href="#">Contact</a></p>
+      <a href="#">About the Project</a>
+      <a href="#">Contact</a>
     </footer>
   </div>
 </body>
