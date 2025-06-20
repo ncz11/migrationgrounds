@@ -1,100 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
-      font-family: 'Libre Baskerville', serif;
-      background-color: #EFF1F3;
-      color: #1D1D1D;
-      height: 100%;
+      box-sizing: border-box;
     }
 
     body {
-      display: flex;
-      flex-direction: column;
+      font-family: 'Libre Baskerville', serif;
+      background-color: #EFF1F3;
+      color: #1D1D1D;
+      overflow-x: hidden;
     }
 
-    .header {
+    header {
       text-align: center;
-      padding: 40px 0 20px;
-      background-color: #EFF1F3;
+      padding: 40px 0 20px 0;
+      background-color: #fff;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 4.5rem;
+      font-size: 3.5rem;
       font-weight: bold;
       color: #1D1D1D;
       text-transform: uppercase;
-      margin: 0;
-      cursor: pointer;
+      text-decoration: none;
     }
 
     .container {
       display: flex;
-      flex: 1;
-      overflow: hidden;
-      height: calc(100vh - 140px);
+      min-height: 80vh;
     }
 
     .sidebar {
-      width: 240px;
       background-color: #EED7A1;
-      padding: 30px 20px;
-      overflow-y: auto;
-      flex-shrink: 0;
+      width: 240px;
+      padding: 30px 0;
+      position: sticky;
+      top: 0;
+      height: fit-content;
     }
 
-    .sidebar a {
-      display: block;
+    .sidebar-nav {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar-nav li {
       margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .sidebar-nav a {
       color: #1D1D1D;
       font-weight: bold;
       text-decoration: none;
+      font-size: 1.1rem;
     }
 
-    .main-content {
+    .main {
       flex: 1;
       padding: 30px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      overflow-y: auto;
     }
 
     .preview-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      flex-grow: 1;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
     }
 
     .preview-card {
-      background: #fff;
-      padding: 18px;
-      border-radius: 8px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     }
 
     .section-title {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
       color: #A398B3;
       font-weight: bold;
-      font-size: 1.2rem;
       margin-bottom: 10px;
     }
 
     .article-title {
-      color: #1D1D1D;
       font-weight: bold;
-      font-size: 1rem;
-      margin: 10px 0 5px;
+      font-size: 1.1rem;
+      margin-bottom: 8px;
+      color: #1D1D1D;
       text-decoration: none;
+      display: inline-block;
     }
 
     .article-title:hover {
@@ -102,16 +108,13 @@
     }
 
     .chapeau {
-      font-size: 0.9rem;
-      line-height: 1.4;
+      font-size: 0.95rem;
       color: #1D1D1D;
-      max-height: 6.8em;
-      overflow: hidden;
+      line-height: 1.5;
     }
 
     footer {
-      margin-top: 30px;
-      padding: 10px 0 30px;
+      margin-top: 60px;
       text-align: center;
     }
 
@@ -119,93 +122,115 @@
       display: flex;
       justify-content: center;
       gap: 30px;
+      margin-bottom: 15px;
     }
 
     .footer-links a {
       color: #1D1D1D;
-      font-weight: bold;
       text-decoration: none;
+      font-weight: bold;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .icons a svg {
+      width: 24px;
+      height: 24px;
+      fill: #1D1D1D;
+      transition: fill 0.3s;
+    }
+
+    .icons a:hover svg {
+      fill: #A398B3;
     }
 
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
-        height: auto;
       }
 
       .sidebar {
         width: 100%;
         display: flex;
-        overflow-x: auto;
+        justify-content: space-around;
       }
 
-      .sidebar a {
-        margin-right: 20px;
+      .sidebar-nav {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
-      .main-content {
-        padding: 20px;
-      }
-
-      .preview-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .site-title {
-        font-size: 2.5rem;
+      .sidebar-nav li {
+        margin: 10px;
       }
     }
   </style>
 </head>
 <body>
-  <header class="header">
-    <h1 class="site-title" onclick="location.href='index.html'">Migration Grounds</h1>
+  <header>
+    <a href="#" class="site-title">Migration Grounds</a>
   </header>
 
   <div class="container">
     <nav class="sidebar">
-      <a href="#">Who Moves</a>
-      <a href="#">Who Stays</a>
-      <a href="#">Across CEE</a>
-      <a href="#">Maps & Gaps</a>
-      <a href="#">Between the Lines</a>
+      <ul class="sidebar-nav">
+        <li><a href="#">Who Moves?</a></li>
+        <li><a href="#">Who Stays?</a></li>
+        <li><a href="#">Across CEE</a></li>
+        <li><a href="#">Maps & Gaps</a></li>
+        <li><a href="#">Between the Lines</a></li>
+      </ul>
     </nav>
 
-    <main class="main-content">
+    <main class="main">
       <div class="preview-grid">
         <div class="preview-card">
-          <div class="section-title">Who Moves</div>
-          <a class="article-title" href="#">Skilled Youth on the Move</a>
-          <p class="chapeau">Exploring the latest data on youth migration from Romania's urban centers, focusing on the role of educational background and employment incentives in destination choice.</p>
+          <div class="section-title">Who Moves?</div>
+          <a href="#" class="article-title">The Patterns of Youth Migration</a>
+          <p class="chapeau">New statistics reveal significant increases in skilled youth mobility post-pandemic, reshaping regional labor pools.</p>
         </div>
         <div class="preview-card">
-          <div class="section-title">Who Stays</div>
-          <a class="article-title" href="#">Staying for Family, Leaving for Work</a>
-          <p class="chapeau">Why some communities experience high immobility rates: insights from recent ethnographic studies on family ties, care responsibilities and rural resilience.</p>
+          <div class="section-title">Who Stays?</div>
+          <a href="#" class="article-title">The Invisible Majority</a>
+          <p class="chapeau">Exploring why rural populations in Eastern Romania are less mobile and how they shape the country's demographic profile.</p>
         </div>
         <div class="preview-card">
           <div class="section-title">Across CEE</div>
-          <a class="article-title" href="#">East to East: CEE Migration Flows</a>
-          <p class="chapeau">An overview of recent mobility trends among Central and Eastern European countries, with a spotlight on circular migration and policy contradictions.</p>
+          <a href="#" class="article-title">Migration Trends 2024</a>
+          <p class="chapeau">A comparative analysis across Central and Eastern Europe shows diverging strategies in migration governance and social integration.</p>
         </div>
         <div class="preview-card">
           <div class="section-title">Maps & Gaps</div>
-          <a class="article-title" href="#">Where Data Disappears</a>
-          <p class="chapeau">Gaps in migration data collection in border regions: what we know, what we assume, and why it matters for policy and public debate.</p>
+          <a href="#" class="article-title">Where Talent Drains</a>
+          <p class="chapeau">Interactive cartography of counties with the sharpest declines in skilled labor — and where it's going.</p>
         </div>
         <div class="preview-card">
           <div class="section-title">Between the Lines</div>
-          <a class="article-title" href="#">Narratives We Ignore</a>
-          <p class="chapeau">Reflecting on hidden assumptions in public discourse on migration: how metaphors and silences shape perceptions across media and education.</p>
+          <a href="#" class="article-title">Beyond the Numbers</a>
+          <p class="chapeau">Reflections on statistical silences, blind spots in demographic analysis, and what gets left out of official narratives.</p>
         </div>
       </div>
 
       <footer>
         <div class="footer-links">
           <a href="#">About the Project</a>
-          <a href="mailto:natalia.malancu@gmail.com" title="Email"><img src="gmail-icon.png" alt="Gmail" width="24"></a>
-          <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" title="LinkedIn"><img src="linkedin-icon.png" alt="LinkedIn" width="24"></a>
-          <a href="https://orcid.org/0000-0002-3576-2422" title="ORCID"><img src="orcid-icon.png" alt="ORCID" width="24"></a>
+        </div>
+        <div class="icons">
+          <a href="mailto:natalia.malancu@gmail.com" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 13.065L.8 4.2h22.4L12 13.065zm0 2.13L0 5.333v14.133h24V5.333L12 15.195z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.94 3.5a2.25 2.25 0 1 1 0 4.5 2.25 2.25 0 0 1 0-4.5zm.02 4.725H1.5V21h2.46V8.225zm4.095 0h-2.46V21H8.06V14.43c0-3.263 4.18-3.53 4.18 0V21h2.46v-7.478c0-5.35-6.18-5.16-6.68-2.521V8.225z"/></svg>
+          </a>
+          <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0zM12 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12 12 6.628 0 12-5.372 12-12C24 5.373 18.628 0 12 0zm0 22.5C6.201 22.5 1.5 17.799 1.5 12S6.201 1.5 12 1.5 22.5 6.201 22.5 12 17.799 22.5 12 22.5z"/></svg>
+          </a>
         </div>
       </footer>
     </main>
