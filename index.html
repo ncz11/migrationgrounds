@@ -27,7 +27,7 @@
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 4rem;
+      font-size: 4.2rem;
       color: #1D1D1D;
       font-weight: bold;
       text-transform: uppercase;
@@ -35,31 +35,29 @@
     }
 
     .main-content {
-      max-width: 1400px;
+      max-width: 95vw;
       margin: 0 auto;
-      padding: 10px 40px 30px;
+      padding: 10px 10px 30px;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
+      gap: 20px;
     }
 
     .preview-box {
       background-color: #ffffff;
-      padding: 24px;
+      padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.06);
     }
 
     .section-title {
       font-family: 'Lora', serif;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #A398B3;
       font-weight: bold;
-      margin-bottom: 10px;
-      display: inline-block;
       text-decoration: none;
     }
 
@@ -67,27 +65,28 @@
       font-weight: bold;
       color: #1D1D1D;
       text-decoration: none;
+      margin: 8px 0;
       display: block;
-      margin-bottom: 6px;
     }
 
     .article-title:hover {
       text-decoration: underline;
     }
 
-    .article-date {
-      font-style: italic;
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-      display: block;
-    }
-
     .article-chapeau {
+      margin-top: 5px;
       color: #1D1D1D;
     }
 
+    .article-date {
+      font-style: italic;
+      font-size: 0.85rem;
+      margin-top: 10px;
+      display: block;
+    }
+
     footer {
-      margin-top: 70px;
+      margin-top: 60px;
       padding: 40px 20px 60px;
       text-align: center;
     }
@@ -110,12 +109,12 @@
     .icon-links {
       display: flex;
       gap: 25px;
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     .icon-links a svg {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       fill: #1D1D1D;
       transition: fill 0.3s;
     }
@@ -130,11 +129,11 @@
       }
 
       .main-content {
-        padding: 10px 20px;
+        padding: 10px 12px;
       }
 
       .grid {
-        gap: 20px;
+        gap: 18px;
       }
     }
   </style>
@@ -150,36 +149,36 @@
       <div class="preview-box">
         <a href="who-moves.html" class="section-title">Who Moves?</a>
         <a href="#" class="article-title">The Patterns of Migration from Eastern Romania</a>
-        <span class="article-date">June 21, 2025</span>
         <p class="article-chapeau">A short analysis of the demographic shifts and generational divides among migrants in Moldavia, focusing on education and family ties.</p>
+        <span class="article-date">June 21, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="who-stays.html" class="section-title">Who Stays?</a>
         <a href="#" class="article-title">Rural Resilience or Forced Immobility?</a>
-        <span class="article-date">June 19, 2025</span>
         <p class="article-chapeau">Exploring how economic stagnation, gender norms, and elder care shape immobility in Romania’s countryside.</p>
+        <span class="article-date">June 19, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="across-cee.html" class="section-title">Across CEE</a>
         <a href="#" class="article-title">CEE Migration under the Microscope</a>
-        <span class="article-date">June 15, 2025</span>
         <p class="article-chapeau">Comparative look at labor migration trends in Poland, Romania, and Bulgaria after 2007. Includes key charts and structural comparisons.</p>
+        <span class="article-date">June 15, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
         <a href="#" class="article-title">Where Talent Drains Most</a>
-        <span class="article-date">June 12, 2025</span>
         <p class="article-chapeau">This piece maps the regions with highest brain drain intensity in Romania using 2011–2021 data, and links them to local infrastructure deficits.</p>
+        <span class="article-date">June 12, 2025</span>
       </div>
 
       <div class="preview-box">
         <a href="between-the-lines.html" class="section-title">Between the Lines</a>
         <a href="#" class="article-title">Language of Loss</a>
-        <span class="article-date">June 9, 2025</span>
         <p class="article-chapeau">How everyday narratives and nostalgic discourse obscure the structural roots of migration, and why this matters for future policy framing.</p>
+        <span class="article-date">June 9, 2025</span>
       </div>
     </section>
 
@@ -190,23 +189,27 @@
         </div>
         <div class="icon-links">
           <a href="mailto:natalia.malancu@gmail.com" target="_blank" title="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 
-            2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.21l7.39 
-            5.67a1 1 0 001.22 0L20 8.21V18H4z"/></svg>
+            <!-- Gmail SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 
+              2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 
+              6.01V6h16zM4 18V8.21l7.39 5.67a1 1 0 001.22 0L20 
+              8.21V18H4z"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
+            <!-- LinkedIn SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 
-            3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
-            2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
-            9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
+              3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
+              2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
+              9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
           </a>
           <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
+            <!-- ORCID SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 
-            128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
-            112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
-            12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
-            1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
-            0-80Z"/></svg>
+              128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
+              112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
+              12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
+              1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
+              0-80Z"/></svg>
           </a>
         </div>
       </div>
