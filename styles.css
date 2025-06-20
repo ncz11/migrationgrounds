@@ -1,0 +1,68 @@
+
+body {
+    margin: 0;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #EFF1F3;
+    color: #1D1D1D;
+}
+a {
+    text-decoration: none;
+    color: #1D1D1D;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sidebar {
+    background-color: #EED7A1;
+    padding: 2rem;
+    flex: 1 1 200px;
+    min-height: 100vh;
+}
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+.sidebar nav ul li {
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+.content {
+    flex: 3 1 600px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.preview {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.section-title {
+    font-weight: bold;
+    color: #A398B3; /* dusty purple */
+}
+.article-title {
+    margin-top: 0.5rem;
+}
+.footer-links {
+    grid-column: span 2;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .content {
+        grid-template-columns: 1fr;
+    }
+}

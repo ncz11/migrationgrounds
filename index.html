@@ -2,102 +2,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Migration Grounds</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Libre Baskerville', serif;
-            background-color: #EFF1F3;
-            color: #1D1D1D;
-        }
-        header {
-            text-align: center;
-            padding: 2em 0;
-            font-size: 2em;
-            font-weight: bold;
-            color: #1D1D1D;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 1em;
-            font-weight: bold;
-        }
-        nav a {
-            color: #1D1D1D;
-            text-decoration: none;
-        }
-        .container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1em;
-            padding: 1em;
-        }
-        .preview {
-            background-color: #fff;
-            border-left: 5px solid #EED7A1;
-            padding: 1em;
-        }
-        .section-title {
-            font-weight: bold;
-            color: #9A8C98; /* dusty purple */
-            font-size: 1.2em;
-        }
-        .footer {
-            padding: 1em;
-            margin-top: 2em;
-            display: flex;
-            justify-content: space-between;
-            background-color: #EED7A1;
-        }
-        .connect-toggle {
-            cursor: pointer;
-            color: #1D1D1D;
-        }
-        .connect-info {
-            display: none;
-            font-size: 0.9em;
-        }
-    </style>
-    <script>
-        function toggleConnect() {
-            var info = document.getElementById("connectInfo");
-            if (info.style.display === "none") {
-                info.style.display = "block";
-            } else {
-                info.style.display = "none";
-            }
-        }
-    </script>
+    <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header onclick="window.location.href='index.html'">Migration Grounds</header>
-    <nav>
-        <a href="who-moves.html">Who Moves</a>
-        <a href="who-stays.html">Who Stays</a>
-        <a href="across-cee.html">Across CEE</a>
-        <a href="maps-gaps.html">Maps & Gaps</a>
-        <a href="between-the-lines.html">Between the Lines</a>
-    </nav>
     <div class="container">
-        
-    <div class="preview"><div class="section-title">Who Moves</div><div>The patterns of migration...</div></div>
-    <div class="preview"><div class="section-title">Who Stays</div><div>Stability and immobility...</div></div>
-    <div class="preview"><div class="section-title">Across CEE</div><div>Comparative regional trends...</div></div>
-    <div class="preview"><div class="section-title">Maps & Gaps</div><div>Spatial insights and blind spots...</div></div>
-    <div class="preview"><div class="section-title">Between the Lines</div><div>Personal reflections and discourse...</div></div>
-    
-    </div>
-    <div class="footer">
-        <div>About the Project</div>
-        <div class="connect-toggle" onclick="toggleConnect()">Connect</div>
-    </div>
-    <div id="connectInfo" class="connect-info">
-        <p>Email: natalia.malancu@gmail.com</p>
-        <p><a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank">LinkedIn</a></p>
-        <p><a href="https://orcid.org/0000-0002-3576-2422" target="_blank">ORCID</a></p>
+        <div class="sidebar">
+            <a href="index.html" class="title">Migration Grounds</a>
+            <nav>
+                <ul>
+                    <li><a href="who-moves.html">Who Moves?</a></li>
+                    <li><a href="who-stays.html">Who Stays?</a></li>
+                    <li><a href="across-cee.html">Across CEE</a></li>
+                    <li><a href="maps-gaps.html">Maps & Gaps</a></li>
+                    <li><a href="between-the-lines.html">Between the Lines</a></li>
+                </ul>
+            </nav>
+        </div>
+        <main class="content">
+            <div class="preview">
+                <div class="section-title">Who Moves?</div>
+                <div class="article-title">The Patterns of Migration</div>
+            </div>
+            <div class="preview">
+                <div class="section-title">Who Stays?</div>
+                <div class="article-title">Understanding Retention Factors</div>
+            </div>
+            <div class="preview">
+                <div class="section-title">Across CEE</div>
+                <div class="article-title">Trends in Central and Eastern Europe</div>
+            </div>
+            <div class="preview">
+                <div class="section-title">Maps & Gaps</div>
+                <div class="article-title">Visualizing Migration Flows</div>
+            </div>
+            <div class="preview">
+                <div class="section-title">Between the Lines</div>
+                <div class="article-title">Policymaking in Migration</div>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About the Project</a> |
+                <a href="connect.html">Connect</a>
+            </div>
+        </main>
     </div>
 </body>
 </html>
