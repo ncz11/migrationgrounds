@@ -27,27 +27,28 @@
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 3.5rem;
+      font-size: 4rem;
       color: #1D1D1D;
       font-weight: bold;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
     .main-content {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 10px 40px 30px;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
     }
 
     .preview-box {
       background-color: #ffffff;
-      padding: 25px;
+      padding: 24px;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
@@ -66,6 +67,8 @@
       font-weight: bold;
       color: #1D1D1D;
       text-decoration: none;
+      display: block;
+      margin-bottom: 6px;
     }
 
     .article-title:hover {
@@ -75,7 +78,7 @@
     .article-date {
       font-style: italic;
       font-size: 0.9rem;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       display: block;
     }
 
@@ -84,8 +87,8 @@
     }
 
     footer {
-      margin-top: 60px;
-      padding: 40px 20px;
+      margin-top: 70px;
+      padding: 40px 20px 60px;
       text-align: center;
     }
 
@@ -120,6 +123,20 @@
     .icon-links a:hover svg {
       fill: #A398B3;
     }
+
+    @media (max-width: 768px) {
+      .site-title {
+        font-size: 2.6rem;
+      }
+
+      .main-content {
+        padding: 10px 20px;
+      }
+
+      .grid {
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -132,36 +149,36 @@
     <section class="grid">
       <div class="preview-box">
         <a href="who-moves.html" class="section-title">Who Moves?</a>
-        <span class="article-date">Posted on June 21, 2025</span>
         <a href="#" class="article-title">The Patterns of Migration from Eastern Romania</a>
+        <span class="article-date">June 21, 2025</span>
         <p class="article-chapeau">A short analysis of the demographic shifts and generational divides among migrants in Moldavia, focusing on education and family ties.</p>
       </div>
 
       <div class="preview-box">
         <a href="who-stays.html" class="section-title">Who Stays?</a>
-        <span class="article-date">Posted on June 19, 2025</span>
         <a href="#" class="article-title">Rural Resilience or Forced Immobility?</a>
-        <p class="article-chapeau">Exploring how economic stagnation, gender norms, and elder care shape immobility in Romania’s countryside. </p>
+        <span class="article-date">June 19, 2025</span>
+        <p class="article-chapeau">Exploring how economic stagnation, gender norms, and elder care shape immobility in Romania’s countryside.</p>
       </div>
 
       <div class="preview-box">
         <a href="across-cee.html" class="section-title">Across CEE</a>
-        <span class="article-date">Posted on June 15, 2025</span>
         <a href="#" class="article-title">CEE Migration under the Microscope</a>
+        <span class="article-date">June 15, 2025</span>
         <p class="article-chapeau">Comparative look at labor migration trends in Poland, Romania, and Bulgaria after 2007. Includes key charts and structural comparisons.</p>
       </div>
 
       <div class="preview-box">
         <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
-        <span class="article-date">Posted on June 12, 2025</span>
         <a href="#" class="article-title">Where Talent Drains Most</a>
+        <span class="article-date">June 12, 2025</span>
         <p class="article-chapeau">This piece maps the regions with highest brain drain intensity in Romania using 2011–2021 data, and links them to local infrastructure deficits.</p>
       </div>
 
       <div class="preview-box">
         <a href="between-the-lines.html" class="section-title">Between the Lines</a>
-        <span class="article-date">Posted on June 9, 2025</span>
         <a href="#" class="article-title">Language of Loss</a>
+        <span class="article-date">June 9, 2025</span>
         <p class="article-chapeau">How everyday narratives and nostalgic discourse obscure the structural roots of migration, and why this matters for future policy framing.</p>
       </div>
     </section>
@@ -173,13 +190,23 @@
         </div>
         <div class="icon-links">
           <a href="mailto:natalia.malancu@gmail.com" target="_blank" title="Email">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2..."/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 
+            2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.21l7.39 
+            5.67a1 1 0 001.22 0L20 8.21V18H4z"/></svg>
           </a>
           <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 3.5..."/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 
+            3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
+            2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
+            9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
           </a>
           <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1..."/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 
+            128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
+            112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
+            12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
+            1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
+            0-80Z"/></svg>
           </a>
         </div>
       </div>
