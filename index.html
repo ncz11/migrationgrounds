@@ -1,325 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Migration Grounds</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            margin: 0;
+            font-family: 'Libre Baskerville', serif;
+            background-color: #EFF1F3;
+            color: #1D1D1D;
         }
-
-        .container {
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            min-height: 100vh;
-        }
-
-        /* Sidebar */
         .sidebar {
             background-color: #EED7A1;
-            padding: 20px 0;
+            width: 180px;
             position: fixed;
-            width: 250px;
-            height: 100vh;
-            overflow-y: auto;
+            top: 0;
+            bottom: 0;
+            padding: 20px;
         }
-
-        .sidebar-nav {
-            list-style: none;
-        }
-
-        .sidebar-nav li {
-            margin-bottom: 15px;
-        }
-
-        .sidebar-nav a {
+        .sidebar a {
             display: block;
-            padding: 12px 20px;
-            color: #1D1D1D;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar-nav a:hover {
-            background-color: rgba(29, 29, 29, 0.1);
-            color: #1D1D1D;
-        }
-
-        .sidebar-nav a.active {
-            background-color: rgba(29, 29, 29, 0.15);
-        }
-
-        /* Main content */
-        .main-content {
-            margin-left: 250px;
-            padding: 40px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-        }
-
-        .site-title {
-            font-family: 'Lora', serif;
-            font-size: 2.5rem;
-            color: #1D1D1D;
-            font-weight: bold;
-            cursor: pointer;
-            text-decoration: none;
-        }
-
-        .site-title:hover {
-            color: #1D1D1D;
-        }
-
-        /* Content grid */
-        .content-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        .content-card {
-            background: #f9f9f9;
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .card-title {
-            color: #A398B3;
-            font-size: 1.3rem;
-            font-weight: bold;
             margin-bottom: 15px;
-        }
-
-        .article-list {
-            list-style: none;
-        }
-
-        .article-list li {
-            margin-bottom: 10px;
-        }
-
-        .article-list a {
             color: #1D1D1D;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .article-list a:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #f5f5f5;
-            padding: 30px 40px;
-            margin-left: -40px;
-            margin-right: -40px;
-            margin-bottom: -40px;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-
-        .footer-links a {
-            color: #1D1D1D;
-            text-decoration: none;
             font-weight: bold;
+            text-decoration: none;
         }
-
-        .footer-links a:hover {
+        .main {
+            margin-left: 200px;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section-title {
+            color: #A398B3;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .post-title {
             color: #1D1D1D;
+            font-size: 16px;
+            font-weight: normal;
         }
-
-        /* Mobile responsive */
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-
-            .sidebar {
-                position: static;
-                width: 100%;
-                height: auto;
-                padding: 15px 0;
-            }
-
-            .sidebar-nav {
-                display: flex;
-                overflow-x: auto;
-                padding: 0 20px;
-            }
-
-            .sidebar-nav li {
-                margin-bottom: 0;
-                margin-right: 15px;
-                white-space: nowrap;
-            }
-
-            .main-content {
-                margin-left: 0;
-                padding: 20px;
-            }
-
-            .site-title {
-                font-size: 2rem;
-            }
-
-            .content-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .footer {
-                margin-left: -20px;
-                margin-right: -20px;
-                margin-bottom: -20px;
-                padding: 20px;
-            }
-
-            .footer-links {
-                flex-direction: column;
-                gap: 15px;
-            }
+        footer {
+            margin-top: 40px;
+            font-size: 14px;
+        }
+        h1.site-title {
+            text-align: center;
+            color: #1D1D1D;
+            grid-column: 1 / -1;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Sidebar Navigation -->
-        <nav class="sidebar">
-            <ul class="sidebar-nav">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Who Moves</a></li>
-                <li><a href="#">Where To</a></li>
-                <li><a href="#">Why Leave</a></li>
-                <li><a href="#">How Move</a></li>
-                <li><a href="#">What Brings</a></li>
-                <li><a href="#">Resources</a></li>
-            </ul>
-        </nav>
-
-        <!-- Main Content -->
-        <main class="main-content">
-            <header class="header">
-                <a href="#" class="site-title">Migration Grounds</a>
-            </header>
-
-            <div class="content-grid">
-                <div class="content-card">
-                    <h2 class="card-title">Who Moves</h2>
-                    <ul class="article-list">
-                        <li><a href="#">Demographics of Migration</a></li>
-                        <li><a href="#">Age and Gender Patterns</a></li>
-                        <li><a href="#">Educational Background</a></li>
-                        <li><a href="#">Professional Profiles</a></li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h2 class="card-title">Where To</h2>
-                    <ul class="article-list">
-                        <li><a href="#">Popular Destinations</a></li>
-                        <li><a href="#">Urban vs Rural Choices</a></li>
-                        <li><a href="#">Regional Preferences</a></li>
-                        <li><a href="#">Climate Considerations</a></li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h2 class="card-title">Why Leave</h2>
-                    <ul class="article-list">
-                        <li><a href="#">Economic Factors</a></li>
-                        <li><a href="#">Political Reasons</a></li>
-                        <li><a href="#">Social Motivations</a></li>
-                        <li><a href="#">Environmental Drivers</a></li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h2 class="card-title">How Move</h2>
-                    <ul class="article-list">
-                        <li><a href="#">Legal Pathways</a></li>
-                        <li><a href="#">Documentation Process</a></li>
-                        <li><a href="#">Transportation Methods</a></li>
-                        <li><a href="#">Support Networks</a></li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h2 class="card-title">What Brings</h2>
-                    <ul class="article-list">
-                        <li><a href="#">Cultural Contributions</a></li>
-                        <li><a href="#">Economic Impact</a></li>
-                        <li><a href="#">Social Integration</a></li>
-                        <li><a href="#">Innovation and Skills</a></li>
-                    </ul>
-                </div>
-
-                <div class="content-card">
-                    <h2 class="card-title">Resources</h2>
-                    <ul class="article-list">
-                        <li><a href="#">Research Data</a></li>
-                        <li><a href="#">Policy Documents</a></li>
-                        <li><a href="#">Statistical Reports</a></li>
-                        <li><a href="#">Academic Papers</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <footer class="footer">
-                <div class="footer-links">
-                    <a href="#">About the Project</a>
-                    <a href="connect.html">Connect</a>
-                </div>
-            </footer>
-        </main>
+    <div class="sidebar">
+        <a href="who-moves.html">Who Moves?</a>
+        <a href="who-stays.html">Who Stays?</a>
+        <a href="across-cee.html">Across CEE</a>
+        <a href="maps-gaps.html">Maps & Gaps</a>
+        <a href="between-the-lines.html">Between the Lines</a>
     </div>
+    <div class="main">
+        <h1 class="site-title" onclick="window.location.href='index.html'">Migration Grounds</h1>
 
-    <script>
-        // Handle site title click to return to homepage
-        document.querySelector('.site-title').addEventListener('click', function(e) {
-            e.preventDefault();
-            // Refresh page or navigate to home
-            window.location.reload();
-        });
+        <div class="card">
+            <div class="section-title">Who Moves</div>
+            <div class="post-title">The Patterns of Migration</div>
+        </div>
 
-        // Handle sidebar navigation
-        document.querySelectorAll('.sidebar-nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                // Remove active class from all links
-                document.querySelectorAll('.sidebar-nav a').forEach(l => l.classList.remove('active'));
-                
-                // Add active class to clicked link
-                this.classList.add('active');
-            });
-        });
-    </script>
+        <div class="card">
+            <div class="section-title">Who Stays</div>
+            <div class="post-title">Understanding Retention Factors</div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">Across CEE</div>
+            <div class="post-title">Trends in Central and Eastern Europe</div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">Maps & Gaps</div>
+            <div class="post-title">Visualizing Migration Flows</div>
+        </div>
+
+        <div class="card">
+            <div class="section-title">Between the Lines</div>
+            <div class="post-title">Policymaking in Migration</div>
+        </div>
+
+        <footer style="grid-column: 1 / -1;">
+            <div><a href="about.html">About the Project</a> | <a href="connect.html">Connect</a></div>
+        </footer>
+    </div>
 </body>
 </html>
