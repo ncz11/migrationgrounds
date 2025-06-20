@@ -4,136 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Migration Grounds</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Libre+Baskerville&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Libre Baskerville', serif;
-      background-color: #FAFAF8;
+      background-color: #EFF1F3;
       color: #1D1D1D;
+    }
+    .sidebar {
+      background-color: #D9AD5C;
+      width: 250px;
+      position: fixed;
+      height: 100%;
+      padding: 20px;
+      box-sizing: border-box;
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    nav {
-      background-color: #F1C563;
-      width: 220px;
-      min-height: 100vh;
-      padding: 2rem 1rem;
+    .nav-top, .nav-bottom {
+      display: flex;
+      flex-direction: column;
     }
-    nav a {
+    .sidebar h1 {
+      font-family: 'Lora', serif;
+      font-size: 28px;
+      color: #1D1D1D;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar a {
       display: block;
       color: #1D1D1D;
       text-decoration: none;
-      font-family: 'Lora', serif;
-      font-size: 1.1rem;
-      margin-bottom: 1.5rem;
+      margin: 8px 0;
+      font-weight: bold;
+      font-size: 1rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      flex: 1;
-      padding: 3rem;
-      background-color: white;
-    }
-    h1 {
-      font-family: 'Lora', serif;
-      text-align: center;
-      font-size: 2.2rem;
-      margin-bottom: 2.5rem;
+    .content {
+      margin-left: 270px;
+      padding: 40px;
     }
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
     }
-    .article {
-      font-family: 'Libre Baskerville', serif;
+    .section {
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .section-label {
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      margin-bottom: 0.3rem;
-    }
-    .title {
-      font-size: 1.2rem;
+    .section h2 {
+      font-family: 'Lora', serif;
+      color: #9B8CA4;
       font-weight: bold;
-      margin: 0.2rem 0;
-    }
-    .desc {
-      font-size: 0.95rem;
-      margin-bottom: 0.2rem;
-    }
-    .date {
-      font-size: 0.8rem;
-      color: #555;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-    }
-    footer a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #1D1D1D;
+      font-size: 20px;
+      margin-top: 0;
     }
   </style>
 </head>
 <body>
-  <nav>
-    <a href="#">Who Moves?</a>
-    <a href="#">Who Stays?</a>
-    <a href="#">Across CEE</a>
-    <a href="#">Maps & Gaps</a>
-    <a href="#">Between the Lines</a>
-  </nav>
-  <div class="container">
-    <h1>MIGRATION GROUNDS</h1>
-    <div class="grid">
-      <div class="article">
-        <div class="section-label" style="color:#9B8CA4;">WHO MOVES?</div>
-        <div class="title">The Patterns of Migration</div>
-        <div class="desc">Explaining the key factors shaping migration flows</div>
-        <div class="date">April 12, 2022</div>
-      </div>
-      <div class="article">
-        <div class="section-label" style="color:#9B8CA4;">WHO STAYS?</div>
-        <div class="title">Understanding Retention Factors</div>
-        <div class="desc">Examining the reasons why migrants do or do not return home</div>
-        <div class="date">November 3, 2021</div>
-      </div>
-      <div class="article">
-        <div class="section-label" style="color:#9B8CA4;">ACROSS CEE</div>
-        <div class="title">Trends in Central and Eastern Europe</div>
-        <div class="desc">An analysis of recent migration trends in CEE</div>
-        <div class="date">July 20, 2021</div>
-      </div>
-      <div class="article">
-        <div class="section-label" style="color:#9B8CA4;">MAPS & GAPS</div>
-        <div class="title">Visualizing Migration Flows</div>
-        <div class="desc">A look at how maps and data can be used to explore global migration</div>
-        <div class="date">March 9, 2020</div>
-      </div>
-      <div class="article">
-        <div class="section-label" style="color:#9B8CA4;">BETWEEN THE LINES</div>
-        <div class="title">Between the Lines</div>
-        <div class="desc">Insights into the human experience of migration beyond the data</div>
-        <div class="date">June 25, 2018</div>
-      </div>
-      <div class="article">
-        <div class="section-label" style="color:#9B8CA4;">POLICYMAKING IN</div>
-        <div class="title">Policymaking in Migration</div>
-        <div class="desc">An overview of policy measures designed to manage migration trends</div>
-        <div class="date">February 19, 2016</div>
-      </div>
+  <div class="sidebar">
+    <div class="nav-top">
+      <h1>Migration Grounds</h1>
+      <a href="#">Who Moves?</a>
+      <a href="#">Who Stays?</a>
+      <a href="#">Across CEE</a>
+      <a href="#">Maps & Gaps</a>
+      <a href="#">Between the Lines</a>
     </div>
-    <footer>
+    <div class="nav-bottom">
       <a href="#">About the Project</a>
       <a href="#">Contact</a>
-    </footer>
+    </div>
+  </div>
+  <div class="content">
+    <div class="grid">
+      <div class="section">
+        <h2>Who Moves?</h2>
+        <p>Content preview for Who Moves.</p>
+      </div>
+      <div class="section">
+        <h2>Who Stays?</h2>
+        <p>Content preview for Who Stays.</p>
+      </div>
+      <div class="section">
+        <h2>Across CEE</h2>
+        <p>Content preview for Across CEE.</p>
+      </div>
+      <div class="section">
+        <h2>Maps & Gaps</h2>
+        <p>Content preview for Maps & Gaps.</p>
+      </div>
+      <div class="section">
+        <h2>Between the Lines</h2>
+        <p>Content preview for Between the Lines.</p>
+      </div>
+    </div>
   </div>
 </body>
 </html>
