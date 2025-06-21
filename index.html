@@ -547,11 +547,22 @@
   }
 }
 
-@media not all and (min-resolution:.001dpcm) {
-  @supports (-webkit-appearance:none) {
-    .article-chapeau {
-      -webkit-line-clamp: 1 !important;
-    }
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 768px) {
+  .article-chapeau {
+    -webkit-line-clamp: 1 !important;
+    margin-bottom: 0.2vh;
+  }
+
+  .site-title {
+    font-size: clamp(1.1rem, 5vw, 1.7rem);
+  }
+
+  .subtitle {
+    font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+  }
+
+  footer {
+    padding-bottom: 1vh;
   }
 }
 </style>
