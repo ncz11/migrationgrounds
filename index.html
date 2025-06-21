@@ -394,20 +394,6 @@
       footer {
         padding: 1vh 3vw 0.5vh;
       }
-
-      .article-chapeau {
-        display: none;
-      }
-
-      .article-title {
-        font-size: 1rem;
-        margin: 0.5vh 0;
-      }
-
-      .section-title {
-        font-size: 1rem;
-        margin-bottom: 0.3vh;
-      }
     }
 
     @media (max-width: 600px) {
@@ -424,113 +410,97 @@
     html {
       scroll-behavior: smooth;
     }
-
-    .article-lead {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
-      font-style: italic;
-      color: var(--text-secondary);
-      margin-top: 0.5vh;
-      line-height: 1.4;
-      display: block;
+  
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      gap: 1vh;
     }
 
-    /* MOBILE FIT-TO-SCREEN - Only when both width AND height are small */
-    @media (max-width: 900px) and (max-height: 850px) {
-      html, body {
-        height: 100vh;
-        overflow: hidden;
-      }
-
-      .container {
-        height: 100vh;
-      }
-
-      header {
-        padding: 1vh 3vw 0.5vh;
-      }
-
-      header::after {
-        bottom: 0.5vh;
-      }
-
-      .site-title {
-        font-size: 1.6rem;
-        margin-bottom: 0.2vh;
-      }
-
-      .subtitle {
-        font-size: 0.8rem;
-      }
-
-      main {
-        padding: 0.3vh 2vw 0.3vh;
-        flex: 1;
-      }
-
-      .grid {
-        gap: 0.4vh;
-        height: 100%;
-      }
-
-      .preview-box {
-        padding: 0.6rem;
-      }
-
-      .section-title {
-        font-size: 0.85rem;
-        margin-bottom: 0.1vh;
-      }
-
-      .article-title {
-        font-size: 0.8rem;
-        margin: 0.2vh 0;
-      }
-
-      .article-lead {
-        font-size: 0.6rem;
-        margin-top: 0.1vh;
-      }
-
-      footer {
-        padding: 0.5vh 3vw 0.3vh;
-      }
-
-      .footer-links {
-        margin-bottom: 0.3vh;
-      }
-
-      .footer-links a {
-        font-size: 0.75rem;
-        padding: 0.3vh 1vw;
-      }
-
-      .icon-links {
-        gap: 1vw;
-      }
-
-      .icon-links a {
-        padding: 6px;
-      }
-
-      .icon-links a svg {
-        width: 16px;
-        height: 16px;
-      }
+    .preview-box {
+      padding: 1rem;
     }
 
-    /* Safari mobile specific - only for small screens */
-    @supports (-webkit-touch-callout: none) {
-      @media (max-width: 900px) and (max-height: 850px) {
-        html, body {
-          height: -webkit-fill-available;
-        }
-        
-        .container {
-          height: -webkit-fill-available;
-        }
-      }
+    .article-chapeau {
+      display: none;
     }
+
+    .article-title {
+      font-size: 1rem;
+      margin: 0.5vh 0;
+    }
+
+    .section-title {
+      font-size: 1rem;
+      margin-bottom: 0.3vh;
+    }
+  }
+
+
+  @media (max-width: 900px) {
+    html, body {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100vh;
+    }
+
+    main {
+      padding-bottom: 2vh;
+      overflow: hidden;
+    }
+
+    .grid {
+      gap: 0.5vh;
+    }
+
+    .preview-box {
+      padding: 0.6rem;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      margin-bottom: 0.2vh;
+    }
+
+    .article-title {
+      font-size: 0.9rem;
+      margin: 0.3vh 0;
+    }
+
+    .article-chapeau {
+      font-size: 0.75rem;
+      line-height: 1.3;
+    }
+
+    .article-date {
+      font-size: 0.65rem;
+      margin-top: 0.3vh;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+    }
+
+    .icon-links a svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+
+.article-lead {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.7rem;
+  font-style: italic;
+  color: var(--text-secondary);
+  margin-top: 0.5vh;
+  line-height: 1.4;
+  display: block;
+}
 </style>
 </head>
 <body>
