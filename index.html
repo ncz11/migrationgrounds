@@ -31,7 +31,7 @@
 
     html, body {
       height: 100vh;
-      overflow-x: hidden;
+      overflow: hidden;
       font-family: 'Libre Baskerville', serif;
       background: linear-gradient(135deg, var(--cream-base) 0%, var(--cream-warm) 100%);
       color: var(--charcoal);
@@ -54,13 +54,13 @@
     .container {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      height: 100vh;
     }
 
     header {
       flex: 0 0 auto;
       text-align: center;
-      padding: 80px 20px 50px;
+      padding: 2.5vh 2vw 1.5vh;
       background: transparent;
       position: relative;
       overflow: hidden;
@@ -80,11 +80,11 @@
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: clamp(2.5rem, 5vw, 4.4rem);
+      font-size: clamp(2rem, 4vw, 3.5rem);
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 2px;
-      margin-bottom: 15px;
+      margin-bottom: 0.5vh;
       background: linear-gradient(135deg, var(--charcoal) 0%, var(--forest-deep) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -105,7 +105,7 @@
 
     .subtitle {
       font-family: 'Inter', sans-serif;
-      font-size: 1.1rem;
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
       font-weight: 300;
       color: var(--text-secondary);
       letter-spacing: 0.5px;
@@ -125,28 +125,26 @@
 
     main {
       flex: 1 1 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 2vw;
+      padding: 0 1.5vw 1.5vh;
+      overflow: hidden;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 35px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1.5vw;
+      height: 100%;
       width: 100%;
-      max-width: 1500px;
     }
 
     .preview-box {
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
-      padding: 40px;
+      padding: clamp(1.5rem, 2.5vw, 2.5rem);
       border-radius: 16px;
       box-shadow: 0 8px 32px var(--shadow-soft);
       border: 1px solid var(--border-soft);
-      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -188,7 +186,7 @@
     }
 
     .preview-box:hover {
-      transform: translateY(-8px);
+      transform: translateY(-4px);
       box-shadow: 0 20px 60px var(--shadow-medium);
       background: rgba(255, 255, 255, 0.95);
     }
@@ -199,14 +197,14 @@
 
     .section-title {
       font-family: 'Lora', serif;
-      font-size: 1.5rem;
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
       color: var(--forest-primary);
       font-weight: 500;
       text-decoration: none;
       display: inline-block;
       position: relative;
       transition: all 0.3s ease;
-      margin-bottom: 8px;
+      margin-bottom: 0.5vh;
     }
 
     .section-title::after {
@@ -232,8 +230,8 @@
     .article-title {
       font-family: 'Lora', serif;
       font-weight: 500;
-      font-size: 1.25rem;
-      margin: 20px 0 15px 0;
+      font-size: clamp(1rem, 1.5vw, 1.2rem);
+      margin: 1vh 0;
       color: var(--charcoal);
       text-decoration: none;
       line-height: 1.4;
@@ -247,16 +245,17 @@
 
     .article-chapeau {
       font-family: 'Inter', sans-serif;
-      margin: 15px 0 20px 0;
+      margin: 1vh 0;
       color: var(--text-secondary);
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: clamp(0.8rem, 1.2vw, 0.95rem);
+      line-height: 1.5;
+      flex-grow: 1;
     }
 
     .article-date {
       font-family: 'Inter', sans-serif;
       font-style: italic;
-      font-size: 0.85rem;
+      font-size: clamp(0.7rem, 1vw, 0.85rem);
       font-weight: 300;
       color: var(--lavender-soft);
       display: flex;
@@ -271,28 +270,39 @@
       font-size: 1.2rem;
     }
 
-    .footer-floating {
-      position: fixed;
-      bottom: 8px;
-      width: 100%;
+    footer {
+      flex: 0 0 auto;
+      padding: 1.5vh 2vw 1vh;
       text-align: center;
-      z-index: 10;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-soft), transparent);
     }
 
     .footer-links {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
-      margin-bottom: 20px;
+      margin-bottom: 1vh;
     }
 
     .footer-links a {
       color: var(--charcoal);
       font-weight: bold;
       text-decoration: none;
-      padding: 12px 20px;
+      padding: 0.8vh 1.5vw;
       border-radius: 25px;
       transition: all 0.3s ease;
       display: inline-block;
+      font-size: clamp(0.8rem, 1.2vw, 1rem);
     }
 
     .footer-links a:hover {
@@ -304,11 +314,11 @@
     .icon-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 1.5vw;
     }
 
     .icon-links a {
-      padding: 15px;
+      padding: clamp(8px, 1.2vw, 15px);
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
@@ -326,8 +336,8 @@
     }
 
     .icon-links a svg {
-      width: 22px;
-      height: 22px;
+      width: clamp(16px, 2vw, 22px);
+      height: clamp(16px, 2vw, 22px);
       fill: var(--charcoal);
       transition: fill 0.3s ease;
     }
@@ -345,49 +355,53 @@
       outline-offset: 2px;
     }
 
+    /* Fifth box spans both columns at bottom */
+    .preview-box:nth-child(5) {
+      grid-column: 1 / -1;
+    }
+
     /* Responsive Design */
-    @media (max-width: 1024px) {
+    @media (max-width: 1200px) {
       .grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
+        gap: 1.2vw;
+      }
+      
+      .preview-box {
+        padding: clamp(1.2rem, 2vw, 2rem);
       }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        gap: 1vh;
+      }
+
+      .preview-box:nth-child(5) {
+        grid-column: 1;
+      }
+
       header {
-        padding: 60px 20px 40px;
+        padding: 2vh 3vw 1vh;
       }
 
-      .site-title {
-        font-size: 2.5rem;
-        letter-spacing: 1px;
+      main {
+        padding: 0 2vw 1vh;
       }
 
-      .grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
-      .preview-box {
-        padding: 30px 25px;
-      }
-
-      .icon-links {
-        gap: 15px;
-      }
-
-      .icon-links a {
-        padding: 12px;
+      footer {
+        padding: 1vh 3vw 0.5vh;
       }
     }
 
-    @media (max-width: 480px) {
-      .preview-box {
-        padding: 25px 20px;
+    @media (max-width: 600px) {
+      .grid {
+        gap: 0.8vh;
       }
-
-      .site-title {
-        font-size: 2.2rem;
+      
+      .preview-box {
+        padding: clamp(1rem, 3vw, 1.5rem);
       }
     }
 
@@ -443,7 +457,7 @@
       </section>
     </main>
 
-    <div class="footer-floating">
+    <footer>
       <div class="footer-links">
         <a href="about.html">About the Project</a>
       </div>
@@ -458,7 +472,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 0-80Z"/></svg>
         </a>
       </div>
-    </div>
+    </footer>
   </div>
 </body>
 </html>
