@@ -548,11 +548,12 @@
 }
 
 
-@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+@supports selector(:nth-child(1 of x)) or (-webkit-touch-callout: none) {
   .article-chapeau {
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
     -webkit-line-clamp: 1 !important;
-    line-clamp: 1 !important;
-    max-height: 1.3em;
+    overflow: hidden !important;
   }
 }
 </style>
