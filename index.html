@@ -393,17 +393,18 @@
       padding: 1vh 3vw 0.5vh;
     }
 
-    /* Mobil: doar prima linie din preview, cu ellipsis */
+    /* Mobil: doar prima linie din preview, cu ellipsis - soluția CSS-Tricks */
     .article-preview {
-      display: block !important;
+      width: 100% !important;
       white-space: nowrap !important;
       overflow: hidden !important;
       text-overflow: ellipsis !important;
       margin-bottom: 0.3em !important;
-      width: 100% !important;
       line-height: 1.4 !important;
-      -webkit-line-clamp: unset !important;
-      -webkit-box-orient: unset !important;
+      /* Resetez complet proprietățile pentru multi-line */
+      display: block !important;
+      -webkit-line-clamp: none !important;
+      -webkit-box-orient: initial !important;
     }
 
     /* Ascundem data pe mobil */
