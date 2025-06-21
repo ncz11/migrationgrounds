@@ -572,6 +572,47 @@
     height: 18px;
   }
 }
+
+/* FOOTER VISIBILITY + HR SPACING FIX for iPhone Safari */
+@media screen and (max-width: 480px) {
+  html, body {
+    height: auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  footer {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-size: 0.75rem !important;
+    margin-top: 0.5vh !important;
+    padding: 0.5vh 0 0.6vh 0 !important;
+    height: auto !important;
+  }
+
+  .icons {
+    display: flex !important;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2vh !important;
+    height: auto !important;
+  }
+
+  hr {
+    margin-top: 0.5vh !important;
+    margin-bottom: 1vh !important;
+    border: none;
+    border-top: 1px solid #bbb;
+    width: 90%;
+  }
+
+  .preview-box:last-child {
+    margin-bottom: 0.2vh !important;
+    padding-bottom: 0.2vh !important;
+  }
+}
 </style>
 </head>
 <body>
