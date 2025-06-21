@@ -502,70 +502,67 @@
   display: block;
 }
 
-/* RESCUE FIX FOR SAFARI iOS: Title, Tagline, Footer, No Scroll Bug */
+/* FINAL TOTAL FIX: NO SCROLL, TIGHT PREVIEW SPACING, ALL VISIBLE */
 @media screen and (max-width: 480px) {
   html, body {
-    padding: 0 !important;
     margin: 0 !important;
-    height: auto !important;
-    overflow-y: auto !important;
+    padding: 0 !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    font-size: 13px;
     -webkit-overflow-scrolling: touch;
-    font-size: 14px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
   }
 
   header {
-    display: block;
+    font-size: 1.2rem !important;
+    line-height: 1.1 !important;
     text-align: center;
-    font-size: 1.4rem !important;
-    line-height: 1.2 !important;
-    margin-top: 1vh;
-    margin-bottom: 0.4vh;
+    margin-top: 0.4vh;
+    margin-bottom: 0.2vh;
   }
 
   .tagline {
     text-align: center;
-    font-size: 0.95rem !important;
-    margin-bottom: 0.5vh;
+    font-size: 0.9rem !important;
+    margin: 0 0 0.3vh 0;
   }
 
   hr {
-    margin: 0.2vh auto 0.6vh auto !important;
+    margin: 0.2vh auto 0.3vh auto;
+    width: 85%;
     border: none;
     border-top: 1px solid #aaa;
-    width: 85%;
   }
 
   .card-list {
+    flex-grow: 1;
+    overflow: hidden;
+    padding: 0 1vw;
     display: flex;
     flex-direction: column;
-    gap: 0.4vh;
-    padding: 0 1.5vw;
-    margin: 0;
+    justify-content: space-between;
+    gap: 0.25vh;
   }
 
   .preview-box {
-    padding: 0.4vh 1vw !important;
-    font-size: 0.82rem !important;
-    line-height: 1.2 !important;
-  }
-
-  .preview-box:last-child {
-    padding-bottom: 0.2vh !important;
-    margin-bottom: 0 !important;
+    padding: 0.2vh 0.6vw !important;
+    font-size: 0.75rem !important;
+    line-height: 1.1 !important;
+    flex: 1;
   }
 
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.7rem !important;
-    padding: 0.3vh 0 0.4vh 0 !important;
-    margin-top: 0.6vh;
+    font-size: 0.65rem;
+    padding: 0.3vh 0 0.2vh 0;
+    text-align: center;
   }
 
   footer > div:first-child {
     font-weight: bold;
-    margin-bottom: 0.3vh;
+    margin-bottom: 0.2vh;
   }
 
   .icons {
@@ -576,8 +573,8 @@
   }
 
   .icons svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
   }
 }
 </style>
