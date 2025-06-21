@@ -588,6 +588,104 @@
     height: 16px;
   }
 }
+
+@media screen and (max-width: 480px) {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  header {
+    padding: 1.2vh 3vw 0.8vh;
+  }
+
+  .site-title {
+    font-size: 1.5rem !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.2vh;
+  }
+
+  .subtitle {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.2vh;
+  }
+
+  main {
+    flex-grow: 1;
+    padding: 0 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3vh;
+    flex-grow: 1;
+  }
+
+  .preview-box {
+    flex: 1;
+    padding: 0.5vh 2vw !important;
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
+    background: rgba(255,255,255,0.88);
+    gap: 0.3vh;
+  }
+
+  .section-title {
+    margin-bottom: 0.1vh !important;
+  }
+
+  .article-title {
+    font-size: 0.8rem !important;
+    margin: 0.1vh 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .article-chapeau {
+    font-size: 0.7rem !important;
+    margin: 0.1vh 0 !important;
+    line-height: 1.2 !important;
+  }
+
+  .article-lead {
+    font-size: 0.66rem !important;
+    margin-top: 0.2vh !important;
+    line-height: 1.2 !important;
+  }
+
+  footer {
+    font-size: 0.7rem;
+    padding: 0.4vh 3vw 0.3vh;
+  }
+
+  .footer-links a {
+    font-weight: bold;
+    font-size: 0.72rem !important;
+  }
+
+  .icon-links {
+    gap: 4px;
+    margin-top: 0.3vh;
+  }
+
+  .icon-links a {
+    padding: 4px !important;
+  }
+
+  .icon-links svg {
+    width: 16px;
+    height: 16px;
+  }
+}
 </style>
 </head>
 <body>
