@@ -439,12 +439,13 @@
 
   @media (max-width: 900px) {
     html, body {
-      height: 100vh;
-      overflow: hidden;
+      min-height: 100vh;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .container {
-      height: 100vh;
+      min-height: 100vh;
     }
 
     main {
@@ -490,6 +491,15 @@
     }
   }
 
+
+    .article-lead {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-top: 0.5vh;
+    }
+
 </style>
 </head>
 <body>
@@ -505,35 +515,35 @@
           <a href="who-moves.html" class="section-title">Who Moves?</a>
           <a href="#" class="article-title">Youth Exodus from Iași County</a>
           <p class="article-chapeau">An overview of how skilled youth are reshaping migration flows in northeastern Romania. Focus on age and education. Urban vs rural migration intentions, the role of universities, and gender patterns.</p>
-          <span class="article-date">June 21, 2025</span>
+          <span class="article-lead">How many of Iași's graduates stay put?</span>June 21, 2025</span>
         </div>
 
         <div class="preview-box">
           <a href="who-stays.html" class="section-title">Who Stays?</a>
           <a href="#" class="article-title">Staying Behind by Choice?</a>
           <p class="article-chapeau">Exploring patterns of voluntary immobility among older adults and women in small towns and rural areas. Family obligations, rootedness, and labor force detachment.</p>
-          <span class="article-date">June 18, 2025</span>
+          <span class="article-lead">Why do women in small towns stay?</span>June 18, 2025</span>
         </div>
 
         <div class="preview-box">
           <a href="across-cee.html" class="section-title">Across CEE</a>
           <a href="#" class="article-title">Romania & Poland: A Comparison</a>
           <p class="article-chapeau">This article compares migration trajectories in two Central Eastern European countries, with a focus on post-2015 trends, diaspora return intentions, and political narratives.</p>
-          <span class="article-date">June 15, 2025</span>
+          <span class="article-lead">A shared pattern across the Visegrád states?</span>June 15, 2025</span>
         </div>
 
         <div class="preview-box">
           <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
           <a href="#" class="article-title">Brain Drain Hotspots</a>
           <p class="article-chapeau">A county-level mapping of skilled migration in Romania. Where is human capital loss highest—and why? Infrastructure gaps, education access, and policy voids explained.</p>
-          <span class="article-date">June 12, 2025</span>
+          <span class="article-lead">What drives skilled youth out of rural counties?</span>June 12, 2025</span>
         </div>
 
         <div class="preview-box">
           <a href="between-the-lines.html" class="section-title">Between the Lines</a>
           <a href="#" class="article-title">The Discourse of Decline</a>
           <p class="article-chapeau">An analysis of how national and local media frame population loss, focusing on metaphor and memory. Discursive devices of loss, blame, and demographic nostalgia.</p>
-          <span class="article-date">June 9, 2025</span>
+          <span class="article-lead">Can narratives shape how we understand loss?</span>June 9, 2025</span>
         </div>
       </section>
     </main>
