@@ -253,6 +253,39 @@
     white-space: normal;
   }
 
+  /* Pe mobil ascundem chapeau și arătăm doar preview */
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      gap: 1vh;
+    }
+
+    .preview-box:nth-child(5) {
+      grid-column: 1;
+    }
+
+    header {
+      padding: 2vh 3vw 1vh;
+    }
+
+    main {
+      padding: 0 2vw 1vh;
+    }
+
+    footer {
+      padding: 1vh 3vw 0.5vh;
+    }
+
+    .article-chapeau {
+      display: none !important;
+    }
+
+    .article-preview {
+      display: -webkit-box !important;
+    }
+  }
+
   .article-date {
     font-family: 'Inter', sans-serif;
     font-style: italic;
@@ -369,30 +402,6 @@
     
     .preview-box {
       padding: clamp(1.2rem, 2vw, 2rem);
-    }
-  }
-
-  @media (max-width: 900px) {
-    .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, auto);
-      gap: 1vh;
-    }
-
-    .preview-box:nth-child(5) {
-      grid-column: 1;
-    }
-
-    header {
-      padding: 2vh 3vw 1vh;
-    }
-
-    main {
-      padding: 0 2vw 1vh;
-    }
-
-    footer {
-      padding: 1vh 3vw 0.5vh;
     }
   }
 
