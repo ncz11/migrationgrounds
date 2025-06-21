@@ -272,7 +272,13 @@
       padding: 1vh 3vw 0.5vh;
     }
 
-    .article-preview,
+    /* Restore 1 line preview for mobile */
+    .article-preview {
+      -webkit-line-clamp: 1 !important;
+      margin-bottom: 0.3em !important;
+    }
+
+    /* Hide date on mobile */
     .article-date {
       display: none !important;
     }
@@ -451,6 +457,7 @@
     </a>
   </div>
 </footer>
+</div>
 
 <script>
   // Fix Safari Mobile 100vh bug - set --vh variable dynamically
