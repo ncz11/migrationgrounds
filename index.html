@@ -13,53 +13,60 @@
     }
 
     html, body {
-      height: 100%;
-    }
-
-    body {
+      height: 100vh;
+      overflow: hidden;
       font-family: 'Libre Baskerville', serif;
       background-color: #EFF1F3;
       color: #1D1D1D;
-      line-height: 1.6;
+    }
+
+    .container {
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      height: 100vh;
     }
 
     header {
-      background-color: #EFF1F3;
+      flex: 0 0 auto;
       text-align: center;
-      padding: 60px 20px 30px;
+      padding: 30px 10px 20px;
+      background-color: #EFF1F3;
     }
 
     .site-title {
       font-family: 'Lora', serif;
-      font-size: 5rem;
-      color: #1D1D1D;
-      font-weight: bold;
+      font-size: 4.4rem;
       text-transform: uppercase;
+      font-weight: bold;
+      color: #1D1D1D;
       letter-spacing: 1px;
     }
 
-    .main-content {
-      width: 100%;
-      max-width: 90%;
-      margin: 0 auto;
-      padding: 20px 0;
-      flex: 1;
+    main {
+      flex: 1 1 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2vw;
     }
 
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
+      width: 100%;
+      max-width: 1500px;
     }
 
     .preview-box {
       background-color: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.06);
+      padding: 22px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .section-title {
@@ -72,10 +79,10 @@
 
     .article-title {
       font-weight: bold;
+      font-size: 1.1rem;
+      margin-top: 10px;
       color: #1D1D1D;
       text-decoration: none;
-      display: block;
-      margin-top: 10px;
     }
 
     .article-title:hover {
@@ -83,32 +90,32 @@
     }
 
     .article-chapeau {
-      margin-top: 10px;
+      margin-top: 12px;
       color: #1D1D1D;
     }
 
     .article-date {
       font-style: italic;
       font-size: 0.85rem;
-      margin-top: 12px;
-      display: block;
+      margin-top: 14px;
     }
 
-    footer {
-      margin-top: 80px;
-      padding: 50px 20px 80px;
+    .footer-floating {
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
       text-align: center;
-      background-color: transparent;
     }
 
     .footer-links {
-      font-weight: bold;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
     }
 
     .footer-links a {
       color: #1D1D1D;
+      font-weight: bold;
       text-decoration: none;
+      margin: 0 10px;
     }
 
     .footer-links a:hover {
@@ -118,13 +125,12 @@
     .icon-links {
       display: flex;
       justify-content: center;
-      gap: 24px;
-      margin-top: 10px;
+      gap: 20px;
     }
 
     .icon-links a svg {
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       fill: #1D1D1D;
       transition: fill 0.3s;
     }
@@ -135,111 +141,88 @@
 
     @media (max-width: 768px) {
       .site-title {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
       }
 
       .grid {
         grid-template-columns: 1fr;
       }
 
-      .main-content {
-        padding: 20px 5vw;
+      .preview-box {
+        padding: 20px;
       }
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <div class="site-title">MIGRATION GROUNDS</div>
+    </header>
 
-  <header>
-    <div class="site-title">MIGRATION GROUNDS</div>
-  </header>
+    <main>
+      <section class="grid">
+        <div class="preview-box">
+          <a href="who-moves.html" class="section-title">Who Moves?</a>
+          <a href="#" class="article-title">Youth Exodus from Iași County</a>
+          <p class="article-chapeau">An overview of how skilled youth are reshaping migration flows in northeastern Romania. Focus on age and education. Urban vs rural migration intentions, the role of universities, and gender patterns.</p>
+          <span class="article-date">June 21, 2025</span>
+        </div>
 
-  <main class="main-content">
-    <section class="grid">
-      <div class="preview-box">
-        <a href="who-moves.html" class="section-title">Who Moves?</a>
-        <a href="#" class="article-title">Youth Exodus from Iași County</a>
-        <p class="article-chapeau">
-          An overview of how skilled youth are reshaping migration flows in northeastern Romania.
-          Focus on age and education. This trend highlights both opportunity and structural inequality.
-          Demographic data show sharp contrasts. Policymakers face critical decisions. The future depends on retention.
-        </p>
-        <span class="article-date">June 21, 2025</span>
+        <div class="preview-box">
+          <a href="who-stays.html" class="section-title">Who Stays?</a>
+          <a href="#" class="article-title">Staying Behind by Choice?</a>
+          <p class="article-chapeau">Exploring patterns of voluntary immobility among older adults and women in small towns and rural areas. Family obligations, rootedness, and labor force detachment.</p>
+          <span class="article-date">June 18, 2025</span>
+        </div>
+
+        <div class="preview-box">
+          <a href="across-cee.html" class="section-title">Across CEE</a>
+          <a href="#" class="article-title">Romania & Poland: A Comparison</a>
+          <p class="article-chapeau">This article compares migration trajectories in two Central Eastern European countries, with a focus on post-2015 trends, diaspora return intentions, and political narratives.</p>
+          <span class="article-date">June 15, 2025</span>
+        </div>
+
+        <div class="preview-box">
+          <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
+          <a href="#" class="article-title">Brain Drain Hotspots</a>
+          <p class="article-chapeau">A county-level mapping of skilled migration in Romania. Where is human capital loss highest—and why? Infrastructure gaps, education access, and policy voids explained.</p>
+          <span class="article-date">June 12, 2025</span>
+        </div>
+
+        <div class="preview-box">
+          <a href="between-the-lines.html" class="section-title">Between the Lines</a>
+          <a href="#" class="article-title">The Discourse of Decline</a>
+          <p class="article-chapeau">An analysis of how national and local media frame population loss, focusing on metaphor and memory. Discursive devices of loss, blame, and demographic nostalgia.</p>
+          <span class="article-date">June 9, 2025</span>
+        </div>
+      </section>
+    </main>
+
+    <div class="footer-floating">
+      <div class="footer-links">
+        <a href="about.html">About the Project</a>
       </div>
-
-      <div class="preview-box">
-        <a href="who-stays.html" class="section-title">Who Stays?</a>
-        <a href="#" class="article-title">Staying Behind by Choice?</a>
-        <p class="article-chapeau">
-          Exploring patterns of voluntary immobility among older adults and women in small towns and rural areas.
-          These patterns reflect more than limitations—they also show resilience. Social ties matter.
-          Infrastructure investment is inconsistent. Policy neglect persists. Still, people remain connected to place.
-        </p>
-        <span class="article-date">June 18, 2025</span>
+      <div class="icon-links">
+        <a href="mailto:natalia.malancu@gmail.com" title="Email">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 18V8.21l7.39 5.67a1 1 0 001.22 0L20 8.21V18H4z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 
+          3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
+          2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
+          9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
+        </a>
+        <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 
+          128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
+          112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
+          12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
+          1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
+          0-80Z"/></svg>
+        </a>
       </div>
-
-      <div class="preview-box">
-        <a href="across-cee.html" class="section-title">Across CEE</a>
-        <a href="#" class="article-title">Romania & Poland: A Comparison</a>
-        <p class="article-chapeau">
-          This article compares migration trajectories in two Central Eastern European countries, with a focus on post-2015 trends.
-          Similarities include labor outflows and family separation. However, the timing and scale differ.
-          National policies shaped divergence. EU funding played a role. Historical legacies still echo today.
-        </p>
-        <span class="article-date">June 15, 2025</span>
-      </div>
-
-      <div class="preview-box">
-        <a href="maps-gaps.html" class="section-title">Maps & Gaps</a>
-        <a href="#" class="article-title">Brain Drain Hotspots</a>
-        <p class="article-chapeau">
-          A county-level mapping of skilled migration in Romania. Where is human capital loss highest—and why?
-          Maps show clusters in Moldova and Oltenia. Access to higher education matters.
-          Infrastructure gaps are evident. Migration is both local and global. Some counties invest, others lag.
-        </p>
-        <span class="article-date">June 12, 2025</span>
-      </div>
-
-      <div class="preview-box">
-        <a href="between-the-lines.html" class="section-title">Between the Lines</a>
-        <a href="#" class="article-title">The Discourse of Decline</a>
-        <p class="article-chapeau">
-          An analysis of how national and local media frame population loss, focusing on metaphor and memory.
-          Decline is often personified. Nostalgia is weaponized. Solutions are rarely concrete.
-          Cultural narratives shape fear. Media amplifies despair. But beneath the story, new beginnings emerge.
-        </p>
-        <span class="article-date">June 9, 2025</span>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="footer-links">
-      <a href="about.html">About the Project</a>
     </div>
-    <div class="icon-links">
-      <a href="mailto:natalia.malancu@gmail.com" target="_blank" title="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 
-        2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 2v.01L12 13 4 
-        6.01V6h16zM4 18V8.21l7.39 5.67a1 1 0 001.22 0L20 
-        8.21V18H4z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/natalia-malancu-4253117/" target="_blank" title="LinkedIn">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.98 3.5C3.33 
-        3.5 2 4.83 2 6.48s1.33 2.98 2.98 2.98c1.66 0 2.99-1.34 
-        2.99-2.98S6.64 3.5 4.98 3.5zM2.4 20h5.16V9.36H2.4V20zM9.68 
-        9.36v10.64h5.16v-5.92c0-3.16 4.16-3.42 4.16 0v5.92H24V13c0-5.64-6.08-5.44-7.36-2.66V9.36H9.68z"/></svg>
-      </a>
-      <a href="https://orcid.org/0000-0002-3576-2422" target="_blank" title="ORCID">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path d="M128 0a128 128 0 1 0 
-        128 128A128.14 128.14 0 0 0 128 0Zm0 240a112 112 0 1 1 
-        112-112 112.13 112.13 0 0 1-112 112Zm0-204a12 12 0 1 1-12 
-        12 12 12 0 0 1 12-12Zm24 152h-32a8 8 0 0 1-8-8V76a8 8 0 0 
-        1 8-8h32a56 56 0 0 1 0 112Zm-8-96h-16v80h16a40 40 0 0 0 
-        0-80Z"/></svg>
-      </a>
-    </div>
-  </footer>
-
+  </div>
 </body>
 </html>
