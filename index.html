@@ -587,6 +587,33 @@
     margin-bottom: 0 !important;
   }
 }
+
+/* Safari title + icons visibility fix */
+@media screen and (max-width: 480px) {
+  header {
+    display: block !important;
+    height: auto !important;
+    overflow: visible !important;
+    line-height: 1.2 !important;
+    padding: 1vh 0 !important;
+  }
+
+  .icons {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px;
+    height: auto !important;
+    overflow: visible !important;
+    margin-top: 0.2vh !important;
+  }
+
+  .icons svg {
+    width: 18px !important;
+    height: 18px !important;
+    display: inline-block;
+  }
+}
 </style>
 </head>
 <body>
