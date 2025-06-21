@@ -502,61 +502,59 @@
   display: block;
 }
 
-/* PERFECTED MOBILE VERSION FOR SAFARI iOS */
+/* FINAL: NO SCROLL, VISIBLE TITLE, FULL FOOTER, TIGHT SPACING */
 @media screen and (max-width: 480px) {
   html, body {
     padding: 0 !important;
     margin: 0 !important;
-    height: auto !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    font-size: 15px;
+    height: 100vh !important;
+    overflow-y: hidden !important;
+    font-size: 13.5px !important;
   }
 
   header {
-    font-size: 1.5rem !important;
-    line-height: 1.2 !important;
+    font-size: 1.3rem !important;
+    margin: 0.5vh 0 0.2vh 0 !important;
     text-align: center;
-    margin: 0.8vh auto 0.3vh auto !important;
-    height: auto !important;
-    overflow: visible !important;
+    line-height: 1.1 !important;
   }
 
   hr {
-    margin: 0.3vh auto 1vh auto !important;
+    margin: 0.2vh auto 0.4vh auto !important;
     width: 85%;
     border: none;
-    border-top: 1px solid #bbb;
+    border-top: 1px solid #aaa;
   }
 
   .card-list {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 0.6vh !important;
-    padding: 0 1vw !important;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vh !important;
+    padding: 0 1vw;
     margin: 0 auto !important;
-    width: 100% !important;
+    max-height: 60vh !important;
+    overflow: hidden !important;
   }
 
   .preview-box {
-    padding: 0.4vh 1vw !important;
-    font-size: 0.84rem !important;
-    line-height: 1.2 !important;
+    padding: 0.3vh 0.6vw !important;
+    font-size: 0.78rem !important;
+    line-height: 1.15 !important;
   }
 
   .preview-box:last-child {
-    margin-bottom: 0.4vh !important;
-    padding-bottom: 0.3vh !important;
+    padding-bottom: 0.2vh !important;
+    margin-bottom: 0 !important;
   }
 
   footer {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    font-size: 0.72rem !important;
-    margin: 0.5vh auto 0.3vh auto !important;
-    padding: 0.3vh 0 0.4vh 0 !important;
-    height: auto !important;
+    margin-top: 0.4vh;
+    padding: 0.3vh 0;
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   footer > div:first-child {
@@ -565,16 +563,16 @@
   }
 
   .icons {
-    display: flex !important;
-    justify-content: center !important;
+    display: flex;
     gap: 6px;
+    align-items: center;
+    justify-content: center;
     margin-top: 0.2vh;
   }
 
   .icons svg {
-    width: 18px !important;
-    height: 18px !important;
-    display: inline-block !important;
+    width: 16px !important;
+    height: 16px !important;
   }
 }
 </style>
