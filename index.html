@@ -3,63 +3,134 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Migration Grounds</title>
   <style>
-    /* EXISTING STYLES... (placeholder) */
+    body {
+      font-family: 'Libre Baskerville', serif;
+      background-color: #EFF1F3;
+      margin: 0;
+      padding: 0;
+      color: #1D1D1D;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
 
-    /* SAFARI-SPECIFIC FIX */
-    @supports (-webkit-touch-callout: none) {
-      @media (max-width: 900px) {
-        html, body, .container {
-          height: 100vh !important;
-          overflow: hidden !important;
-          padding-top: env(safe-area-inset-top);
-        }
-        header {
-          padding-bottom: 0.5vh !important;
-        }
-        .site-title, .subtitle {
-          display: block !important;
-        }
-        .grid {
-          display: flex !important;
-          flex-direction: column;
-          gap: 0 !important;
-          height: calc(100vh - 8rem) !important;
-          overflow-y: auto;
-          -webkit-overflow-scrolling: touch;
-        }
-        .preview-box {
-          padding: 0.6rem 1rem !important;
-          margin-bottom: 0 !important;
-        }
-        .article-chapeau, .article-lead, .article-date {
-          font-size: 0.7rem !important;
-          line-height: 1.2 !important;
-        }
-        .article-lead {
-          display: -webkit-box !important;
-          -webkit-line-clamp: 1 !important;
-          -webkit-box-orient: vertical !important;
-          overflow: hidden !important;
-          margin-bottom: 0.2vh !important;
-        }
-        footer {
-          padding: 0.5vh 2vw 1vh !important;
-        }
-        .footer-links, .icon-links {
-          margin-bottom: 0.5vh !important;
-        }
-        .icon-links a {
-          padding: 0.6rem !important;
-        }
+    header {
+      padding-top: 1rem;
+    }
+
+    h1 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 1rem;
+      color: #555;
+      margin: 0.25rem 0 1rem 0;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      margin: 0.3rem auto;
+      max-width: 90%;
+      text-align: left;
+    }
+
+    .section-title {
+      font-weight: bold;
+      font-size: 0.9rem;
+      color: #2E6B4D;
+      margin-bottom: 0.2rem;
+    }
+
+    .article-title {
+      font-family: 'Lora', serif;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .lead {
+      font-style: italic;
+      font-size: 0.8rem;
+      color: #444;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin: 1rem auto 0.5rem auto;
+    }
+
+    .icons {
+      margin-top: 0.5rem;
+    }
+
+    .icons svg {
+      width: 24px;
+      height: 24px;
+      margin: 0 0.3rem;
+      fill: #1D1D1D;
+    }
+
+    @media screen and (max-width: 768px) {
+      .lead {
+        font-size: 0.75rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Placeholder: your working HTML content from last working desktop version -->
-  <p style="padding: 2rem; font-family: sans-serif;">This is a placeholder for your real HTML content. Please paste the original content and keep the new Safari fix CSS inside &lt;style&gt;.</p>
+  <header>
+    <h1>MIGRATION GROUNDS</h1>
+    <h2>Contemporary Migration Research</h2>
+  </header>
+
+  <div class="card">
+    <div class="section-title">Who Moves?</div>
+    <div class="article-title">Youth Exodus from Iași County</div>
+    <div class="lead">An overview of how skilled youth are reshaping migration…</div>
+  </div>
+  <div class="card">
+    <div class="section-title">Who Stays?</div>
+    <div class="article-title">Staying Behind by Choice?</div>
+    <div class="lead">Exploring patterns of voluntary immobility among older…</div>
+  </div>
+  <div class="card">
+    <div class="section-title">Across CEE</div>
+    <div class="article-title">Romania & Poland: A Comparison</div>
+    <div class="lead">A shared pattern across the Visegrád states?</div>
+  </div>
+  <div class="card">
+    <div class="section-title">Maps & Gaps</div>
+    <div class="article-title">Brain Drain Hotspots</div>
+    <div class="lead">What drives skilled youth out of rural counties?</div>
+  </div>
+  <div class="card">
+    <div class="section-title">Between the Lines</div>
+    <div class="article-title">The Discourse of Decline</div>
+    <div class="lead">Can narratives shape how we understand loss?</div>
+  </div>
+
+  <footer>
+    <div><strong>About the Project</strong></div>
+    <div class="icons">
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><circle cx="12" cy="12" r="10"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><path d="M6 6h12v12H6z"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z" fill="none"/><rect x="6" y="6" width="12" height="12"/></svg>
+    </div>
+  </footer>
 </body>
 </html>
