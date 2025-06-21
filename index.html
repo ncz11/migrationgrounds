@@ -212,7 +212,7 @@
     font-family: 'Lora', serif;
     font-weight: 500;
     font-size: clamp(1rem, 1.5vw, 1.2rem);
-    margin: 0 0 0.8em 0; /* Aici am crescut spatiul sub titlu */
+    margin: 0 0 0.8em 0;
     color: var(--charcoal);
     text-decoration: none;
     line-height: 1.3;
@@ -231,14 +231,14 @@
     margin: 0 0 0.3em 0;
     line-height: 1.3;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 3;  /* desktop: până la 3 rânduri */
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: normal;
   }
 
-  /* Pe mobil ascundem chapeau si data */
+  /* Pe mobil ascundem chapeau si data, iar preview la 1 linie */
   @media (max-width: 900px) {
     .grid {
       grid-template-columns: 1fr;
@@ -265,6 +265,9 @@
     .article-chapeau,
     .article-date {
       display: none !important;
+    }
+    .article-preview {
+      -webkit-line-clamp: 1;  /* mobil: o singură linie */
     }
   }
 
