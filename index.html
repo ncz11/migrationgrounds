@@ -614,6 +614,40 @@
     display: inline-block;
   }
 }
+
+/* FINAL NO SCROLL + TITLE OK + ICONS OK */
+@media screen and (max-width: 480px) {
+  html, body {
+    height: auto !important;
+    overflow-y: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .container, main, .card-list {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .preview-box:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  footer {
+    margin-top: 0.5vh !important;
+    padding-top: 0.5vh !important;
+    padding-bottom: 0.2vh !important;
+    margin-bottom: 0 !important;
+  }
+
+  .icons {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
 </style>
 </head>
 <body>
