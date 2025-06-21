@@ -113,22 +113,9 @@
     to {opacity: 1; transform: translateY(0);}
   }
 
+  /* Elementul mobile-extra - ASCUNS pe desktop */
   .mobile-extra {
-    font-family: 'Inter', sans-serif;
-    font-size: clamp(0.8rem, 3vw, 1rem);
-    font-weight: 300;
-    color: var(--text-secondary);
-    letter-spacing: 0.3px;
-    font-style: italic;
-    margin-top: 0.5vh;
     display: none;
-    opacity: 0;
-    animation: mobileExtraFade 1.2s ease-out 0.6s both;
-  }
-
-  @keyframes mobileExtraFade {
-    from {opacity: 0; transform: translateY(8px);}
-    to {opacity: 1; transform: translateY(0);}
   }
 
   main {
@@ -266,47 +253,6 @@
     margin-top: auto;
   }
 
-  /* Pe mobil adaugam textul extra */
-  @media (max-width: 900px) {
-    .mobile-extra {
-      display: block !important;
-      opacity: 1 !important;
-    }
-
-    .grid {
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(5, auto);
-      gap: 1vh;
-    }
-
-    .preview-box:nth-child(5) {
-      grid-column: 1;
-    }
-
-    header {
-      padding: 2vh 3vw 1vh;
-    }
-
-    main {
-      padding: 0 2vw 1vh;
-    }
-
-    footer {
-      padding: 1vh 3vw 0.5vh;
-    }
-
-    /* Mobil: limităm la 1 rând preview */
-    .article-preview {
-      -webkit-line-clamp: 1 !important;
-      margin-bottom: 0.3em !important;
-    }
-
-    /* Ascundem data pe mobil */
-    .article-date {
-      display: none !important;
-    }
-  }
-
   footer {
     flex: 0 0 auto;
     padding: 1.5vh 2vw 1vh;
@@ -415,6 +361,55 @@
     
     .preview-box {
       padding: clamp(1rem, 3vw, 1.5rem);
+    }
+  }
+
+  /* DOAR MOBILE - aici fac modificările */
+  @media (max-width: 900px) {
+    /* Afișez textul extra DOAR pe mobile */
+    .mobile-extra {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      letter-spacing: 0.3px;
+      font-style: italic;
+      margin-top: 8px;
+      text-align: center;
+    }
+
+    .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, auto);
+      gap: 1vh;
+    }
+
+    .preview-box:nth-child(5) {
+      grid-column: 1;
+    }
+
+    header {
+      padding: 2vh 3vw 1vh;
+    }
+
+    main {
+      padding: 0 2vw 1vh;
+    }
+
+    footer {
+      padding: 1vh 3vw 0.5vh;
+    }
+
+    /* Mobil: limităm la 1 rând preview */
+    .article-preview {
+      -webkit-line-clamp: 1 !important;
+      margin-bottom: 0.3em !important;
+    }
+
+    /* Ascundem data pe mobil */
+    .article-date {
+      display: none !important;
     }
   }
 
