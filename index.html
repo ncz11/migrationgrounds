@@ -502,55 +502,61 @@
   display: block;
 }
 
-/* FINAL COMPACT SAFARI-FRIENDLY MOBILE VERSION */
+/* PERFECTED MOBILE VERSION FOR SAFARI iOS */
 @media screen and (max-width: 480px) {
   html, body {
     padding: 0 !important;
     margin: 0 !important;
-    overflow-y: hidden !important;
     height: auto !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 15px;
   }
 
   header {
-    display: block;
-    height: auto !important;
-    overflow: visible;
-    line-height: 1.1;
-    font-size: 1.4rem;
-    margin: 0.5vh auto 0 auto;
+    font-size: 1.5rem !important;
+    line-height: 1.2 !important;
     text-align: center;
+    margin: 0.8vh auto 0.3vh auto !important;
+    height: auto !important;
+    overflow: visible !important;
   }
 
   hr {
-    margin: 0.2vh auto 0.5vh auto !important;
+    margin: 0.3vh auto 1vh auto !important;
+    width: 85%;
+    border: none;
+    border-top: 1px solid #bbb;
   }
 
   .card-list {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0.6vh !important;
     padding: 0 1vw !important;
-    gap: 1vh !important;
-    margin-bottom: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
   }
 
   .preview-box {
-    padding: 0.6vh 1vw;
-    font-size: 0.82rem;
-    line-height: 1.2;
+    padding: 0.4vh 1vw !important;
+    font-size: 0.84rem !important;
+    line-height: 1.2 !important;
   }
 
   .preview-box:last-child {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+    margin-bottom: 0.4vh !important;
+    padding-bottom: 0.3vh !important;
   }
 
   footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.7rem;
-    margin-top: 0.5vh;
-    padding: 0.3vh 0 0.3vh 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    font-size: 0.72rem !important;
+    margin: 0.5vh auto 0.3vh auto !important;
+    padding: 0.3vh 0 0.4vh 0 !important;
+    height: auto !important;
   }
 
   footer > div:first-child {
@@ -559,58 +565,16 @@
   }
 
   .icons {
-    display: flex;
+    display: flex !important;
+    justify-content: center !important;
     gap: 6px;
-    justify-content: center;
-    align-items: center;
-    padding: 0 !important;
-    margin: 0 !important;
+    margin-top: 0.2vh;
   }
 
   .icons svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-/* FOOTER VISIBILITY + HR SPACING FIX for iPhone Safari */
-@media screen and (max-width: 480px) {
-  html, body {
-    height: auto !important;
-    overflow-y: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-  }
-
-  footer {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    font-size: 0.75rem !important;
-    margin-top: 0.5vh !important;
-    padding: 0.5vh 0 0.6vh 0 !important;
-    height: auto !important;
-  }
-
-  .icons {
-    display: flex !important;
-    gap: 8px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.2vh !important;
-    height: auto !important;
-  }
-
-  hr {
-    margin-top: 0.5vh !important;
-    margin-bottom: 1vh !important;
-    border: none;
-    border-top: 1px solid #bbb;
-    width: 90%;
-  }
-
-  .preview-box:last-child {
-    margin-bottom: 0.2vh !important;
-    padding-bottom: 0.2vh !important;
+    width: 18px !important;
+    height: 18px !important;
+    display: inline-block !important;
   }
 }
 </style>
