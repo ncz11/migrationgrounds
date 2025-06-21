@@ -547,13 +547,12 @@
   }
 }
 
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-touch-callout: none) {
-    .article-chapeau {
-      -webkit-line-clamp: 1 !important;
-      line-clamp: 1 !important;
-      max-height: 1.4em;
-    }
+
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+  .article-chapeau {
+    -webkit-line-clamp: 1 !important;
+    line-clamp: 1 !important;
+    max-height: 1.3em;
   }
 }
 </style>
