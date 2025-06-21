@@ -558,6 +558,35 @@
     padding-bottom: 0.5vh !important;
   }
 }
+
+/* Safari-safe overrides */
+@media screen and (max-width: 480px) {
+  html, body {
+    height: auto !important;
+    overflow-y: visible !important;
+    -webkit-overflow-scrolling: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .container, main, .card-list {
+    height: auto !important;
+    overflow: visible !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .preview-box:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0.5vh !important;
+  }
+
+  footer {
+    padding-top: 0.5vh !important;
+    padding-bottom: 0.5vh !important;
+    margin-bottom: 0 !important;
+  }
+}
 </style>
 </head>
 <body>
