@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<title>Youth Exodus from Iași County - Migration Grounds</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --cream-base: #F9F8F6;
+    --cream-warm: #F5F3F0;
+    --forest-primary: #4A7C59;
+    --forest-deep: #3A5F47;
+    --forest-light: #6B9478;
+    --lavender-accent: #8B7CA6;
+    --lavender-soft: #A69BBF;
+    --charcoal: #2E2E2E;
+    --charcoal-light: #4A4A4A;
+    --sage: #9CAF88;
+    --text-secondary: #5F5F5F;
+    --border-soft: #E8E6E3;
+    --shadow-soft: rgba(46, 46, 46, 0.08);
+    --shadow-medium: rgba(46, 46, 46, 0.12);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html, body {
+    height: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    font-family: 'Libre Baskerville', serif;
+    background: linear-gradient(135deg, var(--cream-base) 0%, var(--cream-warm) 100%);
+    color: var(--charcoal);
+    line-height: 1.7;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(circle at 20% 80%, rgba(139,124,166,0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(74,124,89,0.03) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  .container {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 2rem 0;
+    position: relative;
+  }
+
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .back-link {
+    color: var(--forest-primary);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: var(--forest-deep);
+    transform: translateX(-3px);
+  }
+
+  .back-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .breadcrumb {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+  }
+
+  .breadcrumb a {
+    color: var(--forest-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--forest-deep);
+  }
+
+  .article-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .article-title {
+    font-family: 'Lora', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--charcoal);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    animation: titleFade 1s ease-out;
+  }
+
+  @keyframes titleFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .article-meta {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    animation: metaFade 1s ease-out 0.3s both;
+  }
+
+  @keyframes metaFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .article-date {
+    color: var(--lavender-accent);
+    font-style: italic;
+  }
+
+  .article-category {
+    color: var(--forest-primary);
+    font-weight: 500;
+  }
+
+  main {
+    flex: 1;
+  }
+
+  .article-content {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 8px 32px var(--shadow-soft);
+    border: 1px solid var(--border-soft);
+    position: relative;
+    animation: contentFade 1s ease-out 0.5s both;
+  }
+
+  @keyframes contentFade {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .article-content::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--forest-primary), var(--lavender-accent));
+    border-radius: 16px 16px 0 0;
+  }
+
+  .article-content h2 {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    color: var(--forest-primary);
+    margin: 2rem 0 1rem 0;
+    font-weight: 600;
+  }
+
+  .article-content h3 {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: var(--forest-deep);
+    margin: 1.5rem 0 0.8rem 0;
+    font-weight: 500;
+  }
+
+  .article-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--charcoal);
+  }
+
+  .article-content .lead {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--charcoal-light);
+    border-left: 4px solid var(--lavender-accent);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+    font-style: italic;
+  }
+
+  .article-content blockquote {
+    background: rgba(74, 124, 89, 0.05);
+    border-left: 4px solid var(--forest-primary);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+  }
+
+  .highlight-stat {
+    background: linear-gradient(135deg, var(--lavender-accent), var(--lavender-soft));
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2rem 0;
+    font-family: 'Lora', serif;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  footer {
+    padding: 3rem 0 2rem;
+    border-top: 1px solid var(--border-soft);
+    margin-top: 3rem;
+  }
+
+  .article-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-link {
+    color: var(--forest-primary);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+  }
+
+  .nav-link:hover {
+    background: rgba(74, 124, 89, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .nav-link svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 0 1rem;
+    }
+
+    .article-content {
+      padding: 2rem 1.5rem;
+    }
+
+    .navigation {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .article-meta {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .article-navigation {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <nav class="navigation">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+        Back to Home
+      </a>
+      <div class="breadcrumb">
+        <a href="index.html">Migration Grounds</a> / <a href="who-moves.html">Who Moves?</a> / Article
+      </div>
+    </nav>
+
+    <div class="article-header">
+      <h1 class="article-title">Youth Exodus from Iași County</h1>
+      <div class="article-meta">
+        <span class="article-date">June 21, 2025</span>
+        <span class="article-category">Who Moves?</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article class="article-content">
+      <p class="lead">
+        An overview of how skilled youth are reshaping migration flows in northeastern Romania. Focus on age and education patterns reveals that young adults aged 18-30 with higher education qualifications are leading the exodus from Iași County, fundamentally altering the demographic landscape of the region.
+      </p>
+
+      <p>
+        The data shows a stark correlation between educational attainment and migration propensity, with university graduates being three times more likely to emigrate than those with only secondary education. This trend is particularly pronounced in STEM fields, where brain drain has reached critical levels affecting local innovation capacity and economic development.
+      </p>
+
+      <div class="highlight-stat">
+        <span class="stat-number">73%</span>
+        <span class="stat-label">of IT graduates leave Iași within 2 years of graduation</span>
+      </div>
+
+      <p>
+        Local universities paradoxically serve as both talent incubators and departure points, with many graduates viewing their education as a passport to opportunities elsewhere. The phenomenon extends beyond individual choices to encompass entire social networks migrating together, creating chain migration patterns that accelerate the exodus.
+      </p>
+
+      <h2>The Educational Pipeline</h2>
+
+      <p>
+        Universities like Alexandru Ioan Cuza University and Gheorghe Asachi Technical University have become unwitting facilitators of brain drain. While they successfully educate thousands of students annually, the local job market cannot absorb this talent at competitive salary levels. The disparity between Western European wages and local compensation packages creates an irresistible pull factor.
+      </p>
+
+      <blockquote>
+        "I invested four years in my computer science degree, but the starting salary in Iași was less than what I could earn as a junior developer in Berlin. The math was simple." - Anonymous graduate, now working in Germany
+      </blockquote>
+
+      <p>
+        The migration patterns show distinct phases: initial domestic migration to Bucharest for better opportunities, followed by international migration as young professionals build confidence and networks. This two-stage process means that many never return to their home counties, even for visits.
+      </p>
+
+      <h2>Network Effects and Social Capital</h2>
+
+      <p>
+        Social media and professional networks have accelerated the migration process. WhatsApp groups with names like "Iași to Dublin" or "Engineers Abroad" serve as information exchanges, sharing job opportunities, housing tips, and emotional support. These networks reduce the friction of migration and create self-reinforcing cycles.
+      </p>
+
+      <div class="highlight-stat">
+        <span class="stat-number">8.5</span>
+        <span class="stat-label">average number of friends who migrate together from the same university cohort</span>
+      </div>
+
+      <p>
+        The psychological impact of seeing peers succeed abroad cannot be understated. Social media posts showcasing higher living standards, career advancement, and travel opportunities create powerful demonstration effects that influence migration decisions among remaining youth.
+      </p>
+
+      <h2>Long-term Implications</h2>
+
+      <p>
+        The selective nature of youth emigration—focusing on the most educated and ambitious—creates a vicious cycle for Iași County. As human capital depletes, local businesses struggle to innovate and compete, reducing employment opportunities and wages, which in turn motivates more young people to leave.
+      </p>
+
+      <p>
+        Local authorities have attempted various retention strategies, including startup incubators, tax incentives for young entrepreneurs, and partnerships with multinational companies. However, these efforts have shown limited success against the structural economic disadvantages of peripheral regions within the EU.
+      </p>
+
+      <h3>The Demographic Time Bomb</h3>
+
+      <p>
+        Current migration rates, if sustained, will result in a 40% reduction in the 25-35 age cohort by 2030. This demographic shift threatens the sustainability of social security systems, reduces domestic consumption, and accelerates the decline of rural communities surrounding Iași.
+      </p>
+
+      <p>
+        The few who return—often called "boomerang migrants"—typically do so after accumulating significant human and financial capital abroad. While valuable, these returnees represent a small fraction of those who left, insufficient to offset the ongoing exodus.
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <nav class="article-navigation">
+      <a href="who-moves.html" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15,18 9,12 15,6"></polyline>
+        </svg>
+        Back to Who Moves?
+      </a>
+      <a href="index.html" class="nav-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+          <polyline points="9,22 9,12 15,12 15,22"></polyline>
+        </svg>
+        Back to Home
+      </a>
+    </nav>
+  </footer>
+</div>
+</body>
+</html>
